@@ -1,0 +1,107 @@
+.sponsor-header {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: row;
+  padding: 30px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.sponsor-header img {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  overflow: hidden;
+  transform: translateY(-100px);
+}
+
+.sponsor-img {
+  position: fixed;
+
+  /* width: 200%; */
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 25, 0.3)
+  );
+  mask-image: linear-gradient(
+    rgba(255, 255, 25, 0.3),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.sponsor-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 70vw;
+  padding: 0px 30px;
+}
+
+.sponsor-image {
+  display: flex;
+  height: 400px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.sponsor-header h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.sponsor-header p {
+  font-size: 16px;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 30px;
+}
+
+.sponsor-text ul {
+  list-style-type: disc;
+  margin: 0 0 30px 40px;  /* top right bottom left */
+  text-align: left;
+  width: 100%;
+}
+
+.sponsor-text li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.sponsor-header Button {
+  width: 400px;
+  height: 50px;
+}
+
+@media screen and (max-width: 960px) {
+  .sponsor-header {
+    max-height: 800px;
+    padding: 20px;
+  }
+
+  .sponsor-header img {
+    height: 900px;
+  }
+
+  .sponsor-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 90vw;
+    padding: 0px 30px;
+  }
+
+  .sponsor-header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .sponsor-header Button {
+    width: 200px;
+    height: 50px;
+  }
+}
