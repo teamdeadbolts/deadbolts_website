@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
 import "./styles/Navbar.css";
 
 function Navbar() {
@@ -85,7 +84,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="https://www.paypal.com/paypalme/blackKnights2036"
+                to="" // TODO
                 target="_blank"
                 className="nav-links"
                 onClick={closeMobileMenu}
@@ -94,14 +93,6 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && (
-            <Button
-              buttonStyle="btn--outline"
-              linkTo={"https://forms.gle/uuZscsTApGWR8Bm5A"}
-            >
-              Join Us
-            </Button>
-          )}
         </div>
       </nav>
     </>
