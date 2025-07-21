@@ -90,30 +90,6 @@ const HeroSection = () => {
       className="full"
     />
   );
-  // return (
-  //   <div className="hero-container">
-  //     <h1>
-  //       WE ARE <span className="num2036">2036</span>
-  //     </h1>
-
-  //     <div className="hero-btns">
-  //       <Button
-  //         className="btns"
-  //         buttonStyle="btn--outline"
-  //         buttonSize="btn--large"
-  //       >
-  //         LEARN MORE
-  //       </Button>
-  //       <Button
-  //         className="btns"
-  //         buttonStyle="btn--primary"
-  //         buttonSize="btn--large"
-  //       >
-  //         JOIN US <i className="fas fa-arrow-right" />
-  //       </Button>
-  //     </div>
-  //   </div>
-  // );
 };
 
 export default HeroSection;

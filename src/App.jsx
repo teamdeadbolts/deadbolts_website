@@ -8,7 +8,6 @@ import Home from "./components/pages/Home";
 import "./App.css";
 import Services from "./components/pages/Services";
 import Products from "./components/pages/Products";
-import SignUp from "./components/pages/SignUp";
 import Footer from "./components/Footer";
 import Calendar from "./components/pages/Calendar";
 import Sponsors from "./components/pages/Sponsors";
@@ -29,7 +28,6 @@ function App() {
             <Route path="/services" element={<Services />}></Route>
             <Route path="/sponsors" element={<Sponsors />}></Route>
             <Route path="/products" element={<Products />}></Route>
-            <Route path="/sign-up" element={<SignUp />}></Route>
             <Route path="/calendar" element={<Calendar />}></Route>
           </Routes>
           <Footer />
