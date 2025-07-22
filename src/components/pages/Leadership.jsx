@@ -41,7 +41,7 @@ const Leadership = () => {
                     />
                 </Link>
             </div>
-            <h1>Our Mentors</h1>
+            <h2>Our Mentors</h2>
             <div className="leadership-grid">
                 <Link to="/leadership/Sachin-Sangvikar" className="leadership-link">
                     <ProfileCard
