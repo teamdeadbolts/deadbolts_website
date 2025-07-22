@@ -12,6 +12,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
+    margin-top: 20px;
 }
 
 .profile-name {
@@ -22,7 +23,7 @@
 
 .profile-role {
     font-size: 1.5rem;
-    color: #050674; /* dark purple accent */
+    color: #03045E;
     margin-bottom: 1.5rem;
 }
 
@@ -42,5 +43,14 @@
 }
 
 .leadership-link:hover {
+    text-decoration: none;
+}
+.profile-page-container .btn {
+    width: 300px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* prevent wrapping */
     text-decoration: none;
 }

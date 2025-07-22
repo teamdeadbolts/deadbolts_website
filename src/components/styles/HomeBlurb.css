@@ -43,13 +43,13 @@
 
   .image {
     /* height: 300px; */
-    width: 120vw;
+    width: 100vw;
     align-items: flex-end;
     justify-content: flex-end;
   }
 
   .image img {
-    width: 120vw;
+    width: 100vw;
     object-fit: cover;
   }
 
