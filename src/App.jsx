@@ -24,30 +24,32 @@ import AboutUs from "./components/pages/AboutUs"
 
 function App() {
   return (
-      <>
+      <div className="app">
         <Analytics />
         <Router>
           <ScrollToTop />
           <ParallaxProvider>
-            <Navbar />
-            <Routes>
-              <Route path="/" exact element={<Home />}></Route>
-              <Route path="/leadership" element={<Leadership/>}></Route>
-              <Route path="/leadership/Zane-Aloia" element={<ZanePage />}></Route>
-              <Route path="/leadership/Mukul-Naidu" element={<MukulPage />}></Route>
-              <Route path="/leadership/Ethan-Berg" element={<EthanPage />}></Route>
-              <Route path="/leadership/Coen-Shields" element={<CoenPage />}></Route>
-              <Route path="/leadership/Sachin-Sangvikar" element={<SachinPage />}></Route>
-              <Route path="/AboutUs" element={<AboutUs />}></Route>
-              <Route path="/services" element={<Services />}></Route>
-              <Route path="/sponsors" element={<Sponsors />}></Route>
-              <Route path="/products" element={<Products />}></Route>
-              <Route path="/calendar" element={<Calendar />}></Route>
-            </Routes>
+            <main className="content">
+              <Navbar />
+              <Routes>
+                <Route path="/" exact element={<Home />}></Route>
+                <Route path="/leadership" element={<Leadership/>}></Route>
+                <Route path="/leadership/Zane-Aloia" element={<ZanePage />}></Route>
+                <Route path="/leadership/Mukul-Naidu" element={<MukulPage />}></Route>
+                <Route path="/leadership/Ethan-Berg" element={<EthanPage />}></Route>
+                <Route path="/leadership/Coen-Shields" element={<CoenPage />}></Route>
+                <Route path="/leadership/Sachin-Sangvikar" element={<SachinPage />}></Route>
+                <Route path="/AboutUs" element={<AboutUs />}></Route>
+                <Route path="/services" element={<Services />}></Route>
+                <Route path="/sponsors" element={<Sponsors />}></Route>
+                <Route path="/products" element={<Products />}></Route>
+                <Route path="/calendar" element={<Calendar />}></Route>
+              </Routes>
+            </main>
             <Footer />
           </ParallaxProvider>
         </Router>
-      </>
+      </div>
   );
 }
 
