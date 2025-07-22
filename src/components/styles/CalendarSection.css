@@ -1,6 +1,7 @@
 .calendar-wrapper {
   height: 800px;
   padding: 20px 30px;
+  margin-bottom: 2rem;
 }
 
 .calendar-wrapper h1 {
@@ -10,6 +11,7 @@
 
 @media screen and (max-width: 960px) {
   .calendar-wrapper {
-    height: 600px;
+    min-height: 900px;
+    height: 900px;
   }
 }
