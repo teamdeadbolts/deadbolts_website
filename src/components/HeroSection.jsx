@@ -30,9 +30,9 @@ const HeroSection = () => {
         <div className="hero-btns">
           <Button
             className="btns learn-more"
-            buttonStyle="btn--outline"
+            buttonStyle="btn--primary"
             buttonSize="btn--large"
-            linkTo={"/leadership"}
+            linkTo={"/AboutUs"}
           >
             LEARN MORE
           </Button>
@@ -56,13 +56,13 @@ const HeroSection = () => {
     shouldAlwaysCompleteAnimation: true,
     translateX: [0, 0],
   };
-
-  const gradientOverlay = {
-    opacity: [0, 1, "easeOutCubic"],
-    shouldAlwaysCompleteAnimation: true,
-    expanded: false,
-    children: <div className="gradient inset" />,
-  };
+  //
+  // const gradientOverlay = {
+  //   opacity: [0, 1, "easeOutCubic"],
+  //   shouldAlwaysCompleteAnimation: true,
+  //   expanded: false,
+  //   children: <div className="gradient inset" />,
+  // };
 
   const gradientOverlay2 = {
     translateY: [0, 60],

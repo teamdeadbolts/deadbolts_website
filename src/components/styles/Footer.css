@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #242424;
+  background-color: #4255EE;
   padding: 1rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -14,8 +14,8 @@
 }
 
 .social-media-wrapper img {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   transition: 0.3s ease all;
 }
 
@@ -25,7 +25,7 @@
 
 .social-icon-link {
   color: #fff;
-  font-size: 24px;
+  font-size: 25px;
   padding: 30px;
 }
 
@@ -34,10 +34,11 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .contact-us {
+  font-size: 22px;
   color: #fff;
   margin-right: 20px;
   display: flex;
@@ -112,7 +113,7 @@ textarea {
 
   .contact-us {
     margin-right: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .contact-us iframe {

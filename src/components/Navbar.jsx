@@ -57,37 +57,46 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/sponsors"
-                className="nav-links"
-                onClick={closeMobileMenu}
+                  to="/AboutUs"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                  to="/sponsors"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
               >
                 Sponsors
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/leadership"
-                className="nav-links"
-                onClick={closeMobileMenu}
+                  to="/leadership"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
               >
                 Leadership
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/calendar"
-                className="nav-links"
-                onClick={closeMobileMenu}
+                  to="/calendar"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
               >
                 Calendar
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="" // TODO
-                target="_blank"
-                className="nav-links"
-                onClick={closeMobileMenu}
+                  to="https://forms.gle/mosNsy8xmnHaEtRm6" // TODO
+                  target="_blank"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
               >
                 Donate
               </Link>

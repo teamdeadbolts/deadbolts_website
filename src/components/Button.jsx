@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/Button.css";
 import { Link } from "react-router-dom";
 
-const STYLES = ["btn--primary", "btn--outline", "btn--black", "btn--white"];
+const STYLES = ["btn--primary", "btn--outline", "btn--black", "btn--white", "btn--darker", "btn--opposite"];
 
 const SIZES = ["btn--medium", "btn--large"];
 
@@ -21,7 +21,7 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <Link to={linkTo ? linkTo : "/"} target="_blank" className="btn-mobile">
+    <Link to={linkTo ? linkTo : "/"} className="btn-mobile">
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}
