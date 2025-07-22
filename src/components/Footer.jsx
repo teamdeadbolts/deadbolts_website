@@ -7,31 +7,38 @@ const Footer = () => {
     <div className="footer-container">
       <div className="social-media-wrapper">
         <Link
-          className="social-icon-link instagram"
-          to="https://www.instagram.com/deadbolts10980/"
-          target="_blank"
-          aria-label="Instagram"
-        >
-          <img src="/images/logos/instagramIconWhite.png" alt="Instagram"></img>
-        </Link>
-        <Link
           className="social-icon-link github"
           to="https://github.com/teamdeadbolts"
           target="_blank"
           aria-label="Github"
         >
-          <img src="/images/logos/githubIconWhite.png" alt="Github"></img>
+          <img src="/images/logos/githubcoloricon.png" alt="Github"></img>
         </Link>
         <Link
-          className="social-icon-link tba"
-          to="https://www.thebluealliance.com/team/10980"
-          target="_blank"
-          aria-label="TBA"
+            className="social-icon-link instagram"
+            to="https://www.instagram.com/deadbolts10980/"
+            target="_blank"
+            aria-label="Instagram"
         >
-          <img src="/images/logos/theblueallianceIconWhite.png" alt="TBA"></img>
+          <img src="/images/logos/instagramcoloricon.png" alt="Instagram"></img>
+        </Link>
+        <Link
+            className="social-icon-link youtube"
+            to="https://youtube.com/@deadbolts10980?si=1HgPkahZiKMXkQQC"
+            target="_blank"
+            aria-label="Youtube"
+        >
+          <img src="/images/logos/youtubecoloricon.png" alt="youtube"></img>
+        </Link>
+        <Link
+            className="social-icon-link tba"
+            to="https://www.thebluealliance.com/team/10980"
+            target="_blank"
+            aria-label="TBA"
+        >
+          <img src="/images/logos/tbacoloricon.png" alt="TBA"></img>
         </Link>
       </div>
-
       <div className="contact-us-wrapper">
         <div className="contact-us">
           <h4>Contact Us</h4>
