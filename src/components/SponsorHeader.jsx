@@ -4,8 +4,8 @@ import "./styles/SponsorHeader.css";
 
 const SponsorHeader = () => {
 return (
-    <div className="sponsor-header">
-        <div className="sponsor-text">
+    <div className="support-header">
+        <div className="support-text">
             <h1>Support Our Team</h1>
             <h3>Help Us Build the Future, One Robot at a Time</h3>
             <div style={{height: '1rem'}}></div>
