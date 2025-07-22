@@ -98,7 +98,7 @@ function Navbar() {
                   className="nav-links"
                   onClick={closeMobileMenu}
               >
-                Donate
+                Contact Us
               </Link>
             </li>
           </ul>
