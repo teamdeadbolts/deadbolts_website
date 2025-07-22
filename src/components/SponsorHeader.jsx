@@ -26,13 +26,14 @@ return (
             </ul>
             <p>
                 We believe this program should be accessible to every student, regardless of their financial background.
-                That’s why we’re reaching out to local businesses and community members for support. In return, all donors receive logo placement on our robot, shirts, website, and more. Most importantly, any donation
+                That’s why we’re reaching out to local businesses and community members for support. In return, our
+                sponsors receive logo placement on our robot, shirts, website, and more. Most importantly, any donation
                 is an opportunity to support the next generation of engineers, creators, and changemakers.
             </p>
             <br/>
             <Button buttonStyle={"btn--black"} buttonSize={"btn--medium"}
                     linkTo={"https://forms.gle/uuZscsTApGWR8Bm5A"}>
-                Support Our Team
+                Become a Sponsor
             </Button>
         </div>
     </div>
