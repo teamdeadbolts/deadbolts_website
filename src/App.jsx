@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import Calendar from "./components/pages/Calendar";
 import Sponsors from "./components/pages/Sponsors";
 
-import { Analytics } from "@vercel/analytics/react";
+
 import Leadership from "./components/pages/Leadership";
 import ZanePage from "./components/pages/ZanePage";
 import CoenPage from "./components/pages/CoenPage";
@@ -25,7 +25,6 @@ import AboutUs from "./components/pages/AboutUs"
 function App() {
   return (
       <div className="app">
-        <Analytics />
         <Router>
           <ScrollToTop />
           <ParallaxProvider>
