@@ -27,6 +27,7 @@
     margin: 0;
     line-height: 1;
     letter-spacing: 6px;
+    font-weight: bold;
 }
 
 .hero-container p {
