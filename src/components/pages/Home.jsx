@@ -9,13 +9,13 @@ const Home = () => {
       <HeroSection />
       <HomeBlurb
         header="FIRST Robotics"
-        paragraph="FIRST is a global robotics community preparing young people for the future. Its mission is to inspire young people to be leaders and innovators in science and technology through mentor-based programs that build skills, inspire innovation, and foster self-confidence."
+        paragraph="FIRST is an international robotics community dedicated to equipping young people with STEM skills for the future. It aims to cultivate leadership and innovation in science and technology through programs that develop skills, spark creativity, and build confidence."
         image="/images/firstRobotics.jpg"
-        background="#AB4501"
+        background="#CAF0F8"
         leftOrRight="left"
-        text="#FFFFFF"
+        text="#000000"
         buttonText="Learn more about FIRST"
-        buttonColor="242424"
+        buttonColor="E7301B"
         link="https://www.firstinspires.org/"
       />
     </>

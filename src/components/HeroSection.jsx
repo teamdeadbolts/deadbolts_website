@@ -28,22 +28,13 @@ const HeroSection = () => {
         </h1>
         <div className="num">10980</div>
         <div className="hero-btns">
-          <Button
-            className="btns learn-more"
-            buttonStyle="btn--primary"
-            buttonSize="btn--large"
-            linkTo={"/AboutUs"}
-          >
+          <a href="/AboutUs" className="btn learn-more btn--primary btn--large">
             LEARN MORE
-          </Button>
-          <Button
-            className="btns join-us"
-            buttonStyle="btn--primary"
-            buttonSize="btn--large"
-            linkTo={"https://forms.gle/uuZscsTApGWR8Bm5A"}
-          >
-            JOIN US <img src="/images/icons/arrow_forward.svg" alt="Arrow" />
-          </Button>
+          </a>
+          <a href="https://forms.gle/uuZscsTApGWR8Bm5A" className="btn join-us btn--primary btn--large">
+            JOIN US <img src="/images/icons/arrow_forward.svg" alt="Arrow"/>
+          </a>
+
         </div>
       </div>
     ),

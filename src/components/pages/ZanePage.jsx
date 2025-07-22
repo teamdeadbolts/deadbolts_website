@@ -16,7 +16,7 @@ const ZanePage = () => (
         </p>
         <div style={{ height: '1rem' }}></div>
         <p className="profile-description">
-            Outside of robotics,  Zane enjoys watching Formula One and developing iOS apps that blend creativity with functionality.
+            Outside of robotics, Zane enjoys watching Formula One and developing iOS apps.
         </p>
     </div>
 );

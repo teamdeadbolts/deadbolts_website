@@ -16,7 +16,7 @@ const EthanPage = () => (
         </p>
         <div style={{ height: '1rem' }}></div>
         <p className="profile-description">
-            When he’s not building robots, Ethan enjoys
+            When he’s not building robots, Ethan enjoys competitive swimming and machining with the lathe.
         </p>
     </div>
 );

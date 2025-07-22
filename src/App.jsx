@@ -7,6 +7,7 @@ import Home from "./components/pages/Home";
 
 import "./App.css";
 import Services from "./components/pages/Services";
+import ScrollToTop from "./components/ScrollToTop";
 import Products from "./components/pages/Products";
 import Footer from "./components/Footer";
 import Calendar from "./components/pages/Calendar";
@@ -26,6 +27,7 @@ function App() {
       <>
         <Analytics />
         <Router>
+          <ScrollToTop />
           <ParallaxProvider>
             <Navbar />
             <Routes>

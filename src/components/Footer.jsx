@@ -24,7 +24,7 @@ const Footer = () => {
         </Link>
         <Link
             className="social-icon-link youtube"
-            to="https://www.instagram.com/deadbolts10980/"
+            to="https://youtube.com/@deadbolts10980?si=1HgPkahZiKMXkQQC"
             target="_blank"
             aria-label="Youtube"
         >
@@ -39,7 +39,6 @@ const Footer = () => {
           <img src="/images/logos/tbacoloricon.png" alt="TBA"></img>
         </Link>
       </div>
-
       <div className="contact-us-wrapper">
         <div className="contact-us">
           <h4>Contact Us</h4>
