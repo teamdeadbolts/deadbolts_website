@@ -4,8 +4,8 @@ import "./styles/SponsorHeader.css";
 
 const SponsorHeader = () => {
 return (
-    <div className="sponsor-header">
-        <div className="sponsor-text">
+    <div className="support-header">
+        <div className="support-text">
             <h1>Support Our Team</h1>
             <h3>Help Us Build the Future, One Robot at a Time</h3>
             <div style={{height: '1rem'}}></div>
@@ -26,14 +26,13 @@ return (
             </ul>
             <p>
                 We believe this program should be accessible to every student, regardless of their financial background.
-                That’s why we’re reaching out to local businesses and community members for support. In return, our
-                sponsors receive logo placement on our robot, shirts, website, and more. Most importantly, any donation
+                That’s why we’re reaching out to local businesses and community members for support. In return, all donors receive logo placement on our robot, shirts, website, and more. Most importantly, any donation
                 is an opportunity to support the next generation of engineers, creators, and changemakers.
             </p>
             <br/>
             <Button buttonStyle={"btn--black"} buttonSize={"btn--medium"}
                     linkTo={"https://forms.gle/uuZscsTApGWR8Bm5A"}>
-                Become a Sponsor
+                Support Our Team
             </Button>
         </div>
     </div>

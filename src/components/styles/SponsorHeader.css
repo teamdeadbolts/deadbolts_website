@@ -1,4 +1,4 @@
-.sponsor-header {
+.support-header {
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -9,7 +9,7 @@
   overflow-x: hidden;
 }
 
-.sponsor-header img {
+.support-header img {
   width: 100%;
   height: 120%;
   object-fit: cover;
@@ -36,7 +36,7 @@
   );
 }
 
-.sponsor-text {
+.support-text {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,24 +45,24 @@
   padding: 0px 30px;
 }
 
-.sponsor-image {
+.support-image {
   display: flex;
   height: 400px;
   object-fit: cover;
   overflow: hidden;
 }
 
-.sponsor-header h1 {
+.support-header h1 {
   font-size: 55px;
   margin-bottom: 24px;
   margin-top: 10px;
 }
-.sponsor-header h3 {
+.support-header h3 {
   margin-top: 0px;
   margin-bottom: 10px;
 }
 
-.sponsor-header p {
+.support-header p {
   font-size: 16px;
   text-align: justify;
   text-justify: inter-word;
@@ -71,19 +71,19 @@
   word-spacing: -0.05em;
 }
 
-.sponsor-text ul {
+.support-text ul {
   list-style-type: disc;
   margin: 0 0 30px 40px;  /* top right bottom left */
   text-align: left;
   width: 100%;
 }
 
-.sponsor-text li {
+.support-text li {
   margin-bottom: 8px;
   font-size: 16px;
 }
 
-.sponsor-header .btn {
+.support-header .btn {
   width: 400px;
   height: 50px;
   display: inline-flex;
@@ -93,17 +93,17 @@
 }
 
 @media screen and (max-width: 960px) {
-    .sponsor-header {
+    .support-header {
       flex-direction: column;
       align-items: center;
       padding: 20px;
   }
 
-  .sponsor-header img {
+  .support-header img {
     height: 900px;
   }
 
-  .sponsor-text {
+  .support-text {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,13 +113,13 @@
     text-align: center;
   }
 
-  .sponsor-header h1 {
+  .support-header h1 {
     font-size: 40px;
     margin-bottom: 20px;
     text-align: center;
   }
 
-  .sponsor-header .btn {
+  .support-header .btn {
     width: auto;
     max-width: 90%;
     height: auto;
