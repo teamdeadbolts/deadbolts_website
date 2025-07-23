@@ -26,7 +26,7 @@
 }
 
 .profile-card:hover .profile-card__image {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .profile-card__content {

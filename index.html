@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="title" content="Deadbolts" />
+    <meta name="title" content="The Deadbolts" />
     <meta
       name="description"
       content="FIRST Robotics Team #10980, The Deadbolts"
@@ -43,5 +43,23 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/index.jsx"></script>
+    <script>
+      (function() {
+        const path = window.location.pathname.toLowerCase();
+        let pageTitle = "The Deadbolts | Team 10980";
+        if (path.includes("/about")) {
+          pageTitle = "About Us | The Deadbolts | Team 10980";
+        } else if (path.includes("/sponsors")) {
+          pageTitle = "Sponsors | The Deadbolts | Team 10980";
+        } else if (path.includes("/leadership")) {
+          pageTitle = "Leadership | The Deadbolts | Team 10980";
+        }
+        document.title = pageTitle;
+        const metaTitle = document.querySelector('meta[name="title"]');
+        if (metaTitle) metaTitle.setAttribute("content", pageTitle);
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", pageTitle);
+      })();
+    </script>
   </body>
 </html>
