@@ -5,7 +5,7 @@ import '../styles/IndividualPersonPage.css';
 const CoenPage = () => (
     <div className="profile-page-container">
         <img
-            src="/images/coen.jpg"
+            src="/images/coen.webp"
             alt="Coen Shields"
             className="profile-photo"
         />

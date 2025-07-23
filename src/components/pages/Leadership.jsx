@@ -10,7 +10,7 @@ const Leadership = () => {
             <div className="leadership-grid">
                 <Link to="/leadership/Zane-Aloia" className="leadership-link">
                     <ProfileCard
-                        image="/images/zane.jpg"
+                        image="/images/zane.webp"
                         name="Zane Aloia"
                         role="Team Captain"
                         description=""
@@ -18,7 +18,7 @@ const Leadership = () => {
                 </Link>
                 <Link to="/leadership/Ethan-Berg" className="leadership-link">
                     <ProfileCard
-                        image="/images/ethan.jpeg"
+                        image="/images/ethan.webp"
                         name="Ethan Berg"
                         role="Mechanical Co-Captain"
                         description=""
@@ -26,7 +26,7 @@ const Leadership = () => {
                 </Link>
                 <Link to="/leadership/Mukul-Naidu" className="leadership-link">
                     <ProfileCard
-                        image="/images/mukul.jpg"
+                        image="/images/mukul.webp"
                         name="Mukul Naidu"
                         role="Mechanical Co-Captain"
                         description=""
@@ -34,7 +34,7 @@ const Leadership = () => {
                 </Link>
                 <Link to="/leadership/Coen-Shields" className="leadership-link">
                     <ProfileCard
-                        image="/images/coen.jpg"
+                        image="/images/coen.webp"
                         name="Coen Shields"
                         role="Programming Captain"
                         description=""
@@ -45,7 +45,7 @@ const Leadership = () => {
             <div className="leadership-grid">
                 <Link to="/leadership/Sachin-Sangvikar" className="leadership-link">
                     <ProfileCard
-                        image="/images/placeholder-profile.jpg"
+                        image="/images/placeholder-profile.webp"
                         name="Sachin Sangvikar"
                         role="Lead Mentor"
                         description=""

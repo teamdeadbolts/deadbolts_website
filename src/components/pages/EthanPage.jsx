@@ -5,7 +5,7 @@ import '../styles/IndividualPersonPage.css';
 const EthanPage = () => (
     <div className="profile-page-container">
         <img
-            src="/images/ethan.jpeg"
+            src="/images/ethan.webp"
             alt="Ethan Berg"
             className="profile-photo"
         />

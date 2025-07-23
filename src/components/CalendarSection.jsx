@@ -8,7 +8,7 @@ const CalendarSection = () => {
       <iframe
         src="https://embed.styledcalendar.com/#vQv8bNfffbCsaNd8Qx29"
         title="Styled Calendar"
-        class="styled-calendar-container"
+        className="styled-calendar-container"
         style={{ width: "100%", border: "none", height: "100%" }}
         data-cy="calendar-embed-iframe"
       ></iframe>

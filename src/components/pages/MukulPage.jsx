@@ -5,7 +5,7 @@ import '../styles/IndividualPersonPage.css';
 const MukulPage = () => (
     <div className="profile-page-container">
         <img
-            src="/images/mukul.jpg"
+            src="/images/mukul.webp"
             alt="Mukul Naidu"
             className="profile-photo"
         />

@@ -5,7 +5,7 @@ import '../styles/IndividualPersonPage.css';
 const SachinPage = () => (
     <div className="profile-page-container">
             <img
-                src="/images/placeholder-profile.jpg"
+                src="/images/placeholder-profile.webp"
                 alt="Sachin Sangvikar"
                 className="profile-photo"
             />

@@ -1,15 +1,13 @@
-import React from "react";
-import { Button } from "./Button";
 import "./styles/HeroSection.css";
 import "../App.css";
 import { ParallaxBanner } from "react-scroll-parallax";
 
 const HeroSection = () => {
   const background = {
-    image: "/images/sky.jpg",
-    translateY: [0, 50],
+    image: "/images/sky.webp",
+    translateY: [0, 0],
     opacity: [1, 0.3],
-    scale: [1.05, 1, "easeOutCubic"],
+    scale: [1.0, 1, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true,
   };
 
@@ -19,9 +17,6 @@ const HeroSection = () => {
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
     children: (
-      // <div className="inset center">
-      //   <h1 className="headline white">Hello World!</h1>
-      // </div>
       <div className="hero-container inset center">
         <h1>
           TEAM 
@@ -41,7 +36,7 @@ const HeroSection = () => {
   };
 
   const foreground = {
-    image: "images/flatirons.png",
+    image: "images/flatirons.webp",
     translateY: [0, 15],
     scale: [1, 1.1, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true,
@@ -72,8 +67,6 @@ const HeroSection = () => {
     <ParallaxBanner
       layers={[
         background,
-        // mask,
-        //gradientOverlay,
         gradientOverlay2,
         foreground,
         headline,
