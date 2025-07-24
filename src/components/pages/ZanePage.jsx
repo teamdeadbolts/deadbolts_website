@@ -5,7 +5,7 @@ import '../styles/IndividualPersonPage.css';
 const ZanePage = () => (
     <div className="profile-page-container">
         <img
-            src="/images/zane.jpg"
+            src="/images/zane.webp"
             alt="Zane Aloia"
             className="profile-photo"
         />

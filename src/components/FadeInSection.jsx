@@ -15,12 +15,9 @@ export default function FadeInSection(props) {
     let domRefCurrent = domRef.current;
 
     const observer = new IntersectionObserver((entries) => {
-      // In your case there's only one element to observe:
       if (entries[0].isIntersecting) {
-        // Not possible to set it back to false like this:
         setVisible(true);
 
-        // No need to keep observing:
         try {
           observer.unobserve(domRefCurrent);
         } catch (error) {
@@ -33,8 +30,7 @@ export default function FadeInSection(props) {
 
     return () => {
       try {
-        // eslint-disable-next-line
-        observer.unobserve(domRef.current);
+        observer.unobserve(domRefCurrent);
       } catch (error) {
         console.error(error);
       }
