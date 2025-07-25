@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
-import "./homeBlurb.module.css";
-import { Button } from "../button/button";
+import styles from "./homeBlurb.module.css";
+import Button from "../button/button";
 import FadeInSection from "../fadeInSection/fadeInSection";
 
 //TODO: Fix mobile spacing weirdness
@@ -27,43 +27,42 @@ export default function HomeBlurb(props: {
   };
 
   React.useEffect(() => {
-    // Only run on client side
     showVertical();
 
-    // Add event listener
     const handleResize = () => {
       showVertical();
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Empty dependency array means this runs once after mount
+  }, []); 
 
   return (
     <div
-      className={`blurb ${props.leftOrRight}`}
+      className={styles.blurb}
       style={{
         background: props.background,
       }}
     >
       {props.leftOrRight === "left" && !vertical ? (
         <>
-          <div className={`image`}>
+          <div className={styles.image}>
             <img src={props.image} alt={props.leftOrRight} />
           </div>
-          <div className={`text`} style={{ color: props.text }}>
+          <div className={styles.text} style={{ color: props.text }}>
             <FadeInSection left="right" className="fadeSec">
               <h1>{props.header}</h1>
               <p>{props.paragraph}</p>
             </FadeInSection>
             <FadeInSection left="right">
               <Button
-                buttonStyle={`btn--${props.buttonColor}`}
-                linkTo={props.link}
+                backgroundColor="#fff"
+                size="lg"
+                color={props.buttonColor}
+                href={props.link}
               >
                 {props.buttonText}
               </Button>
@@ -72,21 +71,23 @@ export default function HomeBlurb(props: {
         </>
       ) : (
         <>
-          <div className={`text`} style={{ color: props.text }}>
+          <div className={styles.text} style={{ color: props.text }}>
             <FadeInSection left="left">
               <h1>{props.header}</h1>
               <p>{props.paragraph}</p>
             </FadeInSection>
             <FadeInSection left="left">
               <Button
-                buttonStyle={`btn--${props.buttonColor}`}
-                linkTo={props.link}
+                backgroundColor="#fff"
+                size="xl"
+                color={props.buttonColor}
+                href={props.link}
               >
                 {props.buttonText}
               </Button>
             </FadeInSection>
           </div>
-          <div className={`image`}>
+          <div className={styles.image}>
             <img src={props.image} alt={props.image} />
           </div>
         </>

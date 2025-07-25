@@ -1,26 +1,29 @@
 'use client'
 
-import Link from "next/link";
-import "./heroSection.module.css";
+import styles from "./heroSection.module.css";
 import { ParallaxBanner, BannerLayer, EasingPreset, ParallaxProvider } from "react-scroll-parallax";
+import Button from "../button/button";
+import Image from "next/image";
 
 const HeroSection = () => {
   const layers: BannerLayer[] = [
     {
-      image: "../../../../public/images/sky.webp",
+      image: "/images/sky.webp",
       translateY: [0, 0],
       opacity: [1, 0.3],
       scale: [1.0, 1, EasingPreset.easeInOut],
       shouldAlwaysCompleteAnimation: true,
     },
+    // {
+    //   translateY: [0, 60],
+    //   shouldAlwaysCompleteAnimation: true,
+    //   expanded: false,
+    //   children: (
+    //     <div className={`${styles.gradientTop} ${styles.inset}`} />
+    //   ),
+    // },
     {
-      translateY: [0, 60],
-      shouldAlwaysCompleteAnimation: true,
-      expanded: false,
-      children: <div className="gradientTop inset" />,
-    },
-    {
-      image: "../../../../public/images/flatirons.webp",
+      image: "/images/flatirons.webp",
       translateY: [0, 15],
       scale: [1, 1.1, EasingPreset.easeInOut],
       shouldAlwaysCompleteAnimation: true,
@@ -32,27 +35,17 @@ const HeroSection = () => {
       shouldAlwaysCompleteAnimation: true,
       expanded: false,
       children: (
-        <div className="hero-container inset center">
+        <div className={`${styles.hero_container} ${styles.inset} ${styles.center}`}>
           <h1>
             TEAM 
           </h1>
-          <div className="num">10980</div>
-          <div className="hero-btns">
-            <Link href="/about-us" className="btn learn-more btn--primary btn--large">
-              LEARN MORE
-            </Link>
-            <Link href="https://forms.gle/uuZscsTApGWR8Bm5A" className="btn join-us btn--primary btn--large">
-              JOIN US <img src="/images/icons/arrow_forward.svg" alt="Arrow"/>
-            </Link>
+          <div className={styles.num}>10980</div>
+          <div className={styles.hero_btns}>
+            <Button href="/about-us" size="lg" color="#000" backgroundColor="#fff">LEARN MORE</Button>
+            <Button href="https://forms.gle/uuZscsTApGWR8Bm5A" target="_blank" size="lg" color="#000" backgroundColor="#fff">JOIN US <Image src="/images/icons/arrow_forward.svg" alt="-->" width={20} height={40}/></Button>
           </div>
         </div>
       ),
-    },
-    // Mask layer (if needed)
-    {
-      shouldAlwaysCompleteAnimation: true,
-      expanded: false,
-      children: <div className="mask" />,
     },
   ];
 
@@ -60,7 +53,7 @@ const HeroSection = () => {
     <ParallaxProvider>
       <ParallaxBanner
         layers={layers}
-        className="full"
+        className={styles.full}
       />
     </ParallaxProvider>
   );
