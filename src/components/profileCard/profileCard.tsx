@@ -13,7 +13,7 @@ interface Props {
 const ProfileCard: React.FC<Props> = ({ image, name, role, description }) => (
   <div className={styles.profileCard}>
     <div className={styles.imageWrapper}>
-      <Image src={image} alt={name} className={styles.image} width={100} height={100} />
+      <Image src={image} alt={name} className={styles.image} width={250} height={250} />
     </div>
     <div className={styles.content}>
       <h3 className={styles.name}>{name}</h3>
