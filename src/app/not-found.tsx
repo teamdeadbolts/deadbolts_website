@@ -1,4 +1,9 @@
+import { Metadata } from "next";
 import Button from "../components/button/button";
+
+export const metadata: Metadata = {
+  title: "The Deadbolts | 404 Not Found"
+}
 
 export default function NotFound() {
   return (

@@ -1,9 +1,14 @@
-'use client'
 // src/pages/AboutUs.jsx
 
 import React from 'react';
 import styles from './page.module.css';
 import Button from "../../components/button/button";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "The Deadbolts | About Us",
+  description: "Learn more about the deadbolts"
+}
 
 export default function AboutUs() { 
   return (

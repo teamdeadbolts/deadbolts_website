@@ -2,7 +2,11 @@
 import React from 'react'
 import styles from './sponsors.module.css'
 import Button from '../../components/button/button'
-// import SponsorList from "../../components/sponsorList/SponsorList";
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "The Deadbolts | Sponsors"
+}
 
 export default function Sponsors() {
   return (

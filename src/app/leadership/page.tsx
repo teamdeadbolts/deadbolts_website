@@ -1,9 +1,14 @@
-'use client';
 import React from 'react';
 import Link from 'next/link';
 import styles from './page.module.css'
 import ProfileCard from '../../components/profileCard/profileCard';
 import { people } from './people';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "The Deadbolts | Leadership",
+  description: "Meet the leaders of The Deadbolts"
+}
 
 const LeadershipPage = () => {
   const leadership = people.filter(p => p.role === 'Leadership');

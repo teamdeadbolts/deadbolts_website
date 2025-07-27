@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import styles from './profileCard.module.css';
 
 interface Props {
@@ -12,7 +13,7 @@ interface Props {
 const ProfileCard: React.FC<Props> = ({ image, name, role, description }) => (
   <div className={styles.profileCard}>
     <div className={styles.imageWrapper}>
-      <img src={image} alt={name} className={styles.image} />
+      <Image src={image} alt={name} className={styles.image} width={100} height={100} />
     </div>
     <div className={styles.content}>
       <h3 className={styles.name}>{name}</h3>

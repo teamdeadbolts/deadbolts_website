@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
+import Image from "next/image";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  const [_button, setButton] = useState(true);
   const [fullTitle, setFullTitle] = useState(true);
 
   const handleClick = () => setClick(!click);
@@ -28,29 +29,18 @@ function Navbar() {
     }
   };
 
-  const sizeHandler = () => {
-    showButton();
-    showFullTitle();
-  };
 
   useEffect(() => {
-    // Only run on client side
-    showButton();
-    showFullTitle();
-
-    // Add event listener
-    const handleResize = () => {
+      const handleResize = () => {
       showButton();
       showFullTitle();
     };
 
-    window.addEventListener("resize", handleResize);
+    handleResize(); 
 
-    // Cleanup event listener on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Empty dependency array means this runs once after mount : "fas fa-bars"
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); 
 
   return (
     <>
@@ -58,12 +48,18 @@ function Navbar() {
         <div className={styles.navbar_container}>
           <Link href="/" className={styles.navbar_logo} onClick={closeMobileMenu}>
             {fullTitle ? "Team Deadbolts" : "Deadbolts"}
-            <img className={styles.navbar_img} src="/images/whitelogo.svg" alt="Logo"></img>
+            <Image className={styles.navbar_img} src="/images/whitelogo.svg" alt="Logo" width={50} height={50}/>
           </Link>
           <div className={styles.menu_icon} onClick={handleClick}>
-            <i className={`${styles.fas} ${styles.fa_times}}`}></i> 
+            <Image
+              src={click ? "/images/icons/close.svg" : "/images/icons/hamburger_menu.svg"}
+              alt="Menu Icon"
+              width={25}
+              height={25}
+              className={styles.menu_icon_img}
+            />
           </div>
-          <ul className={styles.nav_menu}>
+          <ul className={`${styles.nav_menu} ${click ? styles.active : ""}`}>
             <li className={styles.nav_item}>
               <Link href="/" className={styles.nav_links} onClick={closeMobileMenu}>
                 Home

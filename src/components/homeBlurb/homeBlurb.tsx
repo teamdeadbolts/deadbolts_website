@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./homeBlurb.module.css";
 import Button from "../button/button";
 import FadeInSection from "../fadeInSection/fadeInSection";
+import Image from "next/image";
 
 //TODO: Fix mobile spacing weirdness
 export default function HomeBlurb(props: {

@@ -19,6 +19,10 @@
   margin-top: 50px;
 }
 
+.leadership_link {
+  text-decoration: none;
+}
+
 .leadership_grid {
   display: flex;
   flex-wrap: wrap;

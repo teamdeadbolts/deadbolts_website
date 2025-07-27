@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./footer.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
+  // Is it a good idea to use the right image dimensions? Yes. Am I going to do it? No.
   return (
     <div className={styles.footer_container}>
       <div className={styles.social_media_wrapper}>
@@ -12,7 +14,7 @@ const Footer = () => {
           target="_blank"
           aria-label="Github"
         >
-          <img src="/images/logos/githubcoloricon.webp" alt="Github"></img>
+          <Image src="/images/logos/githubcoloricon.webp" width={100} height={100} alt="Github" /> 
         </Link>
         <Link
             className={styles.social_icon_link}
@@ -20,7 +22,7 @@ const Footer = () => {
             target="_blank"
             aria-label="Instagram"
         >
-          <img src="/images/logos/instagramcoloricon.webp" alt="Instagram"></img>
+          <Image src="/images/logos/instagramcoloricon.webp" alt="Instagram" width={100} height={100} />
         </Link>
         <Link
             className={styles.social_icon_link}
@@ -28,7 +30,7 @@ const Footer = () => {
             target="_blank"
             aria-label="Youtube"
         >
-          <img src="/images/logos/youtubecoloricon.webp" alt="youtube"></img>
+          <Image src="/images/logos/youtubecoloricon.webp" alt="youtube" width={100} height={100}/>
         </Link>
         <Link
             className={styles.social_icon_link}
@@ -36,7 +38,7 @@ const Footer = () => {
             target="_blank"
             aria-label="TBA"
         >
-          <img src="/images/logos/tbacoloricon.webp" alt="TBA"></img>
+          <Image src="/images/logos/tbacoloricon.webp" alt="TBA" width={100} height={100}/>
         </Link>
       </div>
       <div className={styles.contact_us_wrapper}>
