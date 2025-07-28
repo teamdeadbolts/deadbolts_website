@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 interface ButtonProps {
@@ -20,6 +20,8 @@ interface ButtonProps {
   className?: string;
   fullWidth?: boolean;
   rounded?: boolean | 'sm' | 'md' | 'lg' | 'xl' | 'full';
+  responsive?: boolean;
+  responsivePadding?: number,
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -40,6 +42,8 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   fullWidth = false,
   rounded = 'md',
+  responsive = false,
+  responsivePadding = 20
 }) => {
   // Size presets
   const sizeStyles = {
@@ -82,6 +86,25 @@ const Button: React.FC<ButtonProps> = ({
     full: '9999px',
   };
 
+  const [calculatedWidth, setCalculatedWidth] = useState<number | string | undefined>(undefined);
+
+  useEffect(() => {
+    if (responsive) {
+      const uppdateWidth = () => {
+        const maxWidth = typeof width == 'number' ? width : 400;
+        const screenWidth = window.innerWidth;
+        const calc = Math.min(maxWidth, screenWidth - responsivePadding);
+        setCalculatedWidth(calc);
+      };
+
+      uppdateWidth();
+      window.addEventListener('resize', uppdateWidth);
+      return () => window.removeEventListener('resize', uppdateWidth);
+    } else {
+      setCalculatedWidth(width)
+    }
+  }, [responsive, responsivePadding, width]);
+
   const baseStyles: React.CSSProperties = {
     display: 'inline-flex',
     alignItems: 'center',
@@ -92,7 +115,7 @@ const Button: React.FC<ButtonProps> = ({
     textDecoration: 'none',
     transition: 'all 0.2s ease-in-out',
     opacity: disabled ? 0.6 : 1,
-    width: fullWidth ? '100%' : width,
+    width: fullWidth ? '100%' : calculatedWidth,
     height,
     borderRadius: typeof rounded === 'boolean' 
       ? (rounded ? '6px' : '0px') 

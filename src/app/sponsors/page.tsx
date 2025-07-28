@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './sponsors.module.css'
 import Button from '../../components/button/button'
 import { Metadata } from 'next'
@@ -37,7 +37,7 @@ export default function Sponsors() {
               is an opportunity to support the next generation of engineers, creators, and changemakers.
           </p>
           <br/>
-          <Button size='lg' width={400} variant='outline' color='#000' href="https://forms.gle/uuZscsTApGWR8Bm5A">
+          <Button width={400} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="https://forms.gle/uuZscsTApGWR8Bm5A">
               Become a Sponsor
           </Button>
         </div>
