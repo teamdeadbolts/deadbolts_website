@@ -1,0 +1,17 @@
+.calendar_wrapper {
+  height: 800px;
+  padding: 20px 30px;
+  margin-bottom: 2rem;
+}
+
+.calendar_wrapper h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 960px) {
+  .calendar_wrapper {
+    min-height: 900px;
+    height: 900px;
+  }
+}
