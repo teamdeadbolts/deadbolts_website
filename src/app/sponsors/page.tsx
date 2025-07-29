@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './sponsors.module.css'
 import Button from '../../components/button/button'
 import { Metadata } from 'next'
