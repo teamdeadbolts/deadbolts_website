@@ -18,7 +18,7 @@ export default function AboutUs() {
         <section className={styles.about_us_section}>
             <h2>Our Mission</h2>
             <p className={styles.about_us_text}>
-                Founded in 2025, The Deadbolts are on a mission to build a team where students can explore engineering, programming, and design while learning what it means to work together toward a shared goal. Through hands_on problem_solving and real_world challenges, we're developing the technical skills and leadership experience that will stay with us long after high school.
+                Founded in 2025, The Deadbolts are on a mission to build a team where students can explore engineering, programming, and design while learning what it means to work together toward a shared goal. Through hands on problem solving and real world challenges, we're developing the technical skills and leadership experience that will stay with us long after high school.
             </p>
         </section>
 
