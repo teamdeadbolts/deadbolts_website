@@ -16,9 +16,14 @@ const HeroSection = () => {
       document.documentElement.style.setProperty("--sky-offset", `${latestScrollY * 0.2}px`);
       document.documentElement.style.setProperty("--content-offset", `${latestScrollY * 0.34}px`);
       
-      // latestScrollY: 0 - 850 
       const scale = 1 + latestScrollY / (850 / maxScale);
       document.documentElement.style.setProperty("--mountains-scale", scale.toString());
+
+      // latestScrollY: 0 - 850 
+      const progress = latestScrollY / 850; // 0 → 1
+      const eased = 1 - Math.pow(progress, 2);
+      const alpha = eased * 0.8;
+      document.documentElement.style.setProperty("--gradient-a", alpha.toString());
       ticking = false;
     };
 
@@ -40,6 +45,7 @@ const HeroSection = () => {
 
   return (
     <section className={styles.hero}>
+      <div className={styles.gradient} />
       {/* Sky */}
       <div className={`${styles.layer} ${styles.sky}`}>
         <Image
