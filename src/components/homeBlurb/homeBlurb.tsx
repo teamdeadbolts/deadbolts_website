@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./homeBlurb.module.css";
 import Button from "../button/button";
 import FadeInSection from "../fadeInSection/fadeInSection";
+import Image from "next/image";
 
 //TODO: Fix mobile spacing weirdness
 export default function HomeBlurb(props: {
@@ -88,7 +89,13 @@ export default function HomeBlurb(props: {
             </FadeInSection>
           </div>
           <div className={styles.image}>
-            <img src={props.image} alt={props.image} />
+            <Image
+              src={props.image}
+              alt={props.leftOrRight}
+              fill
+              style={{ objectFit: "cover" }} 
+              priority 
+            />
           </div>
         </>
       )}
