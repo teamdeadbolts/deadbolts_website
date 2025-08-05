@@ -14,7 +14,7 @@ const HeroSection = () => {
     const updateParallax = () => {
       // Update CSS variables
       document.documentElement.style.setProperty("--sky-offset", `${latestScrollY * 0.2}px`);
-      document.documentElement.style.setProperty("--content-offset", `${latestScrollY * .5 - 200}px`);
+      document.documentElement.style.setProperty("--content-offset", `${latestScrollY * 0.34}px`);
       
       // latestScrollY: 0 - 850 
       const scale = 1 + latestScrollY / (850 / maxScale);
@@ -31,6 +31,10 @@ const HeroSection = () => {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    requestAnimationFrame(() => {
+      latestScrollY = window.scrollY;
+      updateParallax();
+    });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 

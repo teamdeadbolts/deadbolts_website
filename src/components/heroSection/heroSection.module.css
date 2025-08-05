@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  transform: translateY(var(--content-offset, -200px));
+  transform: translateY(calc(-12vh + var(--content-offset, 0px)));
 }
 
 .content h1 {
