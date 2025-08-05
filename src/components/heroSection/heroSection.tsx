@@ -1,61 +1,93 @@
-'use client'
+'use client';
 
+import { useEffect } from "react";
 import styles from "./heroSection.module.css";
-import { ParallaxBanner, BannerLayer, EasingPreset, ParallaxProvider } from "react-scroll-parallax";
 import Button from "../button/button";
 import Image from "next/image";
 
 const HeroSection = () => {
-  const layers: BannerLayer[] = [
-    {
-      image: "/images/sky.webp",
-      translateY: [0, 0],
-      opacity: [1, 0.3],
-      scale: [1.0, 1, EasingPreset.easeInOut],
-      shouldAlwaysCompleteAnimation: true,
-    },
-    // {
-    //   translateY: [0, 60],
-    //   shouldAlwaysCompleteAnimation: true,
-    //   expanded: false,
-    //   children: (
-    //     <div className={`${styles.gradientTop} ${styles.inset}`} />
-    //   ),
-    // },
-    {
-      image: "/images/flatirons.webp",
-      translateY: [0, 15],
-      scale: [1, 1.1, EasingPreset.easeInOut],
-      shouldAlwaysCompleteAnimation: true,
-      translateX: [0, 0],
-    },
-    {
-      translateY: [-15, 15],
-      scale: [1, 1.05, EasingPreset.easeInOut],
-      shouldAlwaysCompleteAnimation: true,
-      expanded: false,
-      children: (
-        <div className={`${styles.hero_container} ${styles.inset} ${styles.center}`}>
-          <h1>
-            TEAM 
-          </h1>
-          <div className={styles.num}>10980</div>
-          <div className={styles.hero_btns}>
-            <Button href="/about-us" size="lg" color="#000" backgroundColor="#fff">LEARN MORE</Button>
-            <Button href="https://forms.gle/uuZscsTApGWR8Bm5A" target="_blank" size="lg" color="#000" backgroundColor="#fff">JOIN US <Image src="/images/icons/arrow_forward.svg" alt="-->" width={20} height={40}/></Button>
-          </div>
-        </div>
-      ),
-    },
-  ];
+  useEffect(() => {
+    let latestScrollY = 0;
+    let ticking = false;
+    const maxScale = 0.1;
+
+    const updateParallax = () => {
+      // Update CSS variables
+      document.documentElement.style.setProperty("--sky-offset", `${latestScrollY * 0.2}px`);
+      document.documentElement.style.setProperty("--content-offset", `${latestScrollY * .5 - 200}px`);
+      
+      // latestScrollY: 0 - 850 
+      const scale = 1 + latestScrollY / (850 / maxScale);
+      document.documentElement.style.setProperty("--mountains-scale", scale.toString());
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      latestScrollY = window.scrollY;
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <ParallaxProvider>
-      <ParallaxBanner
-        layers={layers}
-        className={styles.full}
-      />
-    </ParallaxProvider>
+    <section className={styles.hero}>
+      {/* Sky */}
+      <div className={`${styles.layer} ${styles.sky}`}>
+        <Image
+          src="/images/sky.webp"
+          alt="Sky background"
+          fill
+          priority
+          sizes="200vw"
+          style={{ objectFit: "cover" }}
+          quality={85}
+        />
+      </div>
+
+      {/* Mountains */}
+      <div className={`${styles.layer} ${styles.mountains}`}>
+        <Image
+          src="/images/flatirons.webp"
+          alt="Flatirons mountains"
+          fill
+          priority
+          sizes="200vw"
+          style={{ objectFit: "cover" }}
+          quality={85}
+        />
+      </div>
+
+      {/* Content */}
+      <div className={`${styles.layer} ${styles.content}`}>
+        <h1>TEAM</h1>
+        <div className={styles.num}>10980</div>
+        <div className={styles.hero_btns}>
+          <Button href="/about-us" size="lg" color="#000" backgroundColor="#fff">
+            LEARN MORE
+          </Button>
+          <Button
+            href="https://forms.gle/uuZscsTApGWR8Bm5A"
+            target="_blank"
+            size="lg"
+            color="#000"
+            backgroundColor="#fff"
+          >
+            JOIN US
+            <Image
+              src="/images/icons/arrow_forward.svg"
+              alt="-->"
+              width={20}
+              height={40}
+            />
+          </Button>
+        </div>
+      </div>
+    </section>
   );
 };
 
