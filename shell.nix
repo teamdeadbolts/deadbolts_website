@@ -5,5 +5,6 @@ pkgs.stdenv.mkDerivation {
 
   buildInputs = with pkgs; [
     nodejs_22
+    google-lighthouse
   ];
 }

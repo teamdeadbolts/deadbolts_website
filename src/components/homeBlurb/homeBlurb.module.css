@@ -7,6 +7,7 @@
 
 .image {
   height: 450px;
+  position: relative;
 }
 
 .image img {
@@ -41,16 +42,9 @@
     height: auto;
   }
 
-.image {
-  /* height: 300px; */
-  width: 100vw;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-
-  .image img {
+ .image {
     width: 100vw;
-    object-fit: cover;
+    height: 400px;
   }
 
   .text {
@@ -83,9 +77,9 @@
     margin-bottom: 30px;
     letter-spacing: 4px;
   }
-  
+
   .image {
-    height: 100%;
-    transform: translateY(5px); /* TODO: Why?? */
+    width: 100vw;
   }
+  
 }
