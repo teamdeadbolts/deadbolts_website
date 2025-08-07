@@ -9,11 +9,9 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [_button, setButton] = useState(true);
   const [fullTitle, setFullTitle] = useState(true);
-  const [darkMode, setDarkMode] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const toggleTheme = () => setDarkMode((prev) => !prev);
 
   const showButton = () => {
     if (typeof window !== 'undefined' && window.innerWidth <= 960) {
@@ -38,24 +36,11 @@ function Navbar() {
       showFullTitle();
     };
 
-    handleResize();
+    handleResize(); 
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark') {
-      setDarkMode(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    document.body.classList.toggle('dark', darkMode);
-    document.body.classList.toggle('light', !darkMode);
-    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-  }, [darkMode]);
+  }, []); 
 
   return (
     <>
@@ -74,9 +59,6 @@ function Navbar() {
               className={styles.menu_icon_img}
             />
           </div>
-          <button className={styles.theme_toggle} onClick={toggleTheme} aria-label="Toggle theme">
-            {darkMode ? '🌙' : '☀️'}
-          </button>
           <ul className={`${styles.nav_menu} ${click ? styles.active : ""}`}>
             <li className={styles.nav_item}>
               <Link href="/" className={styles.nav_links} onClick={closeMobileMenu}>
