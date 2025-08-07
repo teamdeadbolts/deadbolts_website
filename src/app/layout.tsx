@@ -16,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="light">
         <div className="root">
-          {/* <ScrollToTop /> */}    
+          {/* <ScrollToTop /> */}
           <Navbar />
             <div className="content">
               {children}
