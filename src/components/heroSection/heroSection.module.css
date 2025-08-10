@@ -63,27 +63,13 @@
   margin-top: 55px;
   display: flex;
   gap: 25px;
-  padding-top: 0px;
-  padding-bottom: 30px;
 }
-
-.bold {
-  font-weight: bold;
-}
-/*.hero_donate_btns {*/
-/*  margin-top: 55px;*/
-/*  padding-top: 0px;*/
-/*  padding-bottom: 35px;*/
-/*}*/
 
 .hero_btns img {
   filter: brightness(0) saturate(100%);
   margin-left: 4px;
   max-height: 20px;
-  /*padding-top: 16px;*/
-  /*padding-bottom: 16px;*/
 }
-
 
 .hero_btns .btn:hover img {
   filter: brightness(0) saturate(100%) invert(1);
@@ -100,4 +86,3 @@
     font-size: 50px;
   }
 }
-

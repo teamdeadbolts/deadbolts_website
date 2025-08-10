@@ -65,39 +65,32 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className={`${styles.nav_item} ${styles.dropdown}`}>
-              <div className={styles.nav_links}>
+            <li className={styles.nav_item}>
+              <Link
+                  href="/about-us"
+                  className={styles.nav_links}
+                  onClick={closeMobileMenu}
+              >
                 About Us
-              </div>
-                <ul className={styles.dropdown_menu}>
-                  <li>
-                    <Link href="/about-us" className={styles.dropdown_link} onClick={closeMobileMenu}>
-                      Overview
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/leadership" className={styles.dropdown_link} onClick={closeMobileMenu}>
-                      Leadership
-                    </Link>
-                  </li>
-                </ul>
+              </Link>
             </li>
-            <li className={`${styles.nav_item} ${styles.dropdown}`}>
-              <div className={styles.nav_links}>
+            <li className={styles.nav_item}>
+              <Link
+                  href="/sponsors"
+                  className={styles.nav_links}
+                  onClick={closeMobileMenu}
+              >
                 Sponsors
-              </div>
-              <ul className={styles.dropdown_menu}>
-                <li>
-                  <Link href="/sponsors" className={styles.dropdown_link} onClick={closeMobileMenu}>
-                    Overview
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.gofundme.com/f/your-campaign" target="_blank" className={styles.dropdown_link} onClick={closeMobileMenu}>
-                    Donate
-                  </Link>
-                </li>
-              </ul>
+              </Link>
+            </li>
+            <li className={styles.nav_item}>
+              <Link
+                  href="/leadership"
+                  className={styles.nav_links}
+                  onClick={closeMobileMenu}
+              >
+                Leadership
+              </Link>
             </li>
             <li className={styles.nav_item}>
               <Link
