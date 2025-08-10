@@ -53,6 +53,15 @@
   /* height: 80px; */
 }
 
+
+.nav_menu.active {
+  background: #242222;
+  left: 0;
+  opacity: 0.989;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
 .nav_item {
   height: 85px;
 }
@@ -67,8 +76,7 @@
 }
 
 .nav_links:hover {
-  border-bottom: 4px solid #fff;
-  transition: all 0.2s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 .fa_bars {
@@ -136,16 +144,12 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
-
   .nav_menu {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* width: 100vw; */
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     position: absolute;
     top: 80px;
     left: -100%;
@@ -154,24 +158,20 @@
     justify-content: flex-start;
   }
 
-  .nav_menu.active {
-    background: #242222;
-    left: 0;
-    opacity: 0.98;
-    transition: all 0.5s ease;
-    z-index: 1;
+  .nav_item {
+    height: auto;
   }
 
   .nav_links {
     text-align: center;
     padding: 2rem;
     width: 100%;
-    display: table;
+    display: block;
   }
 
   .nav_links:hover {
-    background-color: #242222;
-    color: #fff;
+    background-color: #fff;
+    color: #242222;
     border-radius: 0;
   }
 
@@ -202,21 +202,6 @@
     font-size: 2rem;
   }
 
-  .nav_links_mobile {
-    display: block;
-    text-align: center;
-    margin: 2rem auto;
-    border-radius: 4px;
-    width: 80%;
-    text-decoration: none;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: #fff;
-    padding: 14px 20px;
-    border: 1px solid #fff;
-    transition: all 0.3s ease-out;
-  }
-
   .nav_links_mobile:hover {
     background: #242222;
     color: #fff;
@@ -224,6 +209,7 @@
   }
 
   .dropdown {
+    position: relative;
     width: 100%;
   }
 
@@ -235,23 +221,29 @@
     box-shadow: none;
     padding: 0;
     display: none;
+    overflow: hidden;
+    min-height: 0;
     width: 100%;
   }
 
   .dropdown.active .dropdown_menu {
     display: flex;
     flex-direction: column;
+    max-height: 300px;
     width: 100%;
   }
 
   .dropdown_link {
+    display: block;
     text-align: center;
     padding: 1.5rem 0;
     width: 100%;
+    background-color: #fff;
+    color: #242424;
   }
 
   .dropdown_link:hover {
-    background-color: #fff;
-    color: #242424;
+    background-color: #828282;
+    color: #fff;
   }
 }
