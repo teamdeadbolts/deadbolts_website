@@ -38,14 +38,9 @@ export default function Sponsors() {
                         As a 501(c)(3) nonprofit, all donations to our team are tax-deductible to the extent permitted by law.
                     </p>
                     <br/>
-                    <div className={styles.buttons}>
-                      <Button width={300} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="https://forms.gle/uuZscsTApGWR8Bm5A">
+                    <Button width={400} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="https://forms.gle/uuZscsTApGWR8Bm5A">
                         Become a Sponsor
-                      </Button>
-                      <Button width={300} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="https://account.venmo.com/u/teamdeadbolts" target="_blank">
-                        Donate Now
-                      </Button>
-                    </div>
+                    </Button>
                 </div>
             </div>
         </div>
