@@ -65,32 +65,39 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className={styles.nav_item}>
-              <Link
-                  href="/about-us"
-                  className={styles.nav_links}
-                  onClick={closeMobileMenu}
-              >
+            <li className={`${styles.nav_item} ${styles.dropdown}`}>
+              <div className={styles.nav_links}>
                 About Us
-              </Link>
+              </div>
+                <ul className={styles.dropdown_menu}>
+                  <li>
+                    <Link href="/about-us" className={styles.dropdown_link} onClick={closeMobileMenu}>
+                      Overview
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/leadership" className={styles.dropdown_link} onClick={closeMobileMenu}>
+                      Leadership
+                    </Link>
+                  </li>
+                </ul>
             </li>
-            <li className={styles.nav_item}>
-              <Link
-                  href="/sponsors"
-                  className={styles.nav_links}
-                  onClick={closeMobileMenu}
-              >
+            <li className={`${styles.nav_item} ${styles.dropdown}`}>
+              <div className={styles.nav_links}>
                 Sponsors
-              </Link>
-            </li>
-            <li className={styles.nav_item}>
-              <Link
-                  href="/leadership"
-                  className={styles.nav_links}
-                  onClick={closeMobileMenu}
-              >
-                Leadership
-              </Link>
+              </div>
+              <ul className={styles.dropdown_menu}>
+                <li>
+                  <Link href="/sponsors" className={styles.dropdown_link} onClick={closeMobileMenu}>
+                    Overview
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://account.venmo.com/u/teamdeadbolts" target="_blank" className={styles.dropdown_link} onClick={closeMobileMenu}>
+                    Donate
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className={styles.nav_item}>
               <Link
