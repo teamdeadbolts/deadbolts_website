@@ -111,7 +111,6 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-      ,
     </section>
   );
 };
