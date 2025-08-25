@@ -105,7 +105,7 @@ const HeroSection = () => {
             backgroundColor="#051017"
             fontSize={35}
             width={350}
-            variant="secondary"
+            variant="primary"
           >
             DONATE
           </Button>
