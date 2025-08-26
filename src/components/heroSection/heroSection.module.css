@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  padding-top: var(--content-padding, 0);
   transform: translateY(calc(-12vh + var(--content-offset, 0px)));
 }
 
