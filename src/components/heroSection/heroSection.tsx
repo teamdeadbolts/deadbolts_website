@@ -6,6 +6,7 @@ import Button from "../button/button";
 import Image from "next/image";
 
 const HeroSection = () => {
+
   useEffect(() => {
     let latestScrollY = 0;
     let ticking = false;
@@ -24,6 +25,12 @@ const HeroSection = () => {
       const eased = 1 - Math.pow(progress, 2);
       const alpha = eased * 0.8;
       document.documentElement.style.setProperty("--gradient-a", alpha.toString());
+
+      const vh = window.innerHeight;
+      // Map height → padding (shorter height = more padding)
+      // Example: at 900px tall → 0px padding, at 500px tall → 200px padding
+      const padding = Math.max(0, 900 - vh) * (200 / 400); 
+      document.documentElement.style.setProperty("--content-padding", `${padding}px`);
       ticking = false;
     };
 
