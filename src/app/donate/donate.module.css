@@ -9,7 +9,7 @@
 
 .container p {
   margin-top: 28px;
-  max-width: 75vw;
+  max-width: 60vw;
   font-size: 18px;
   color: #242424;
 }
@@ -19,11 +19,21 @@
   /* margin-bottom: 10px; */
 }
 
+.container h3 {
+  margin-top: 28px;
+  font-size: 20px;
+}
+
+.container ul {
+  font-size: 18px;
+  margin-top: 14px;
+}
+
 .countdown {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0;
+  margin: 1.25rem 0;
   width: 100%;
   max-width: 800px
 }
