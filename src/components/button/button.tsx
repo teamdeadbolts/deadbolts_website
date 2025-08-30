@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 interface ButtonProps {
@@ -21,7 +21,7 @@ interface ButtonProps {
   fullWidth?: boolean;
   rounded?: boolean | 'sm' | 'md' | 'lg' | 'xl' | 'full';
   responsive?: boolean;
-  responsivePadding?: number,
+  responsivePadding?: number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -43,7 +43,7 @@ const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
   rounded = 'md',
   responsive = false,
-  responsivePadding = 20
+  responsivePadding = 20,
 }) => {
   // Size presets
   const sizeStyles = {
@@ -53,7 +53,7 @@ const Button: React.FC<ButtonProps> = ({
     xl: { padding: '16px 32px', fontSize: '20px' },
   };
 
-  // Variant base styles
+  // Variant styles
   const variantStyles = {
     primary: {
       backgroundColor: backgroundColor || '#3b82f6',
@@ -77,7 +77,6 @@ const Button: React.FC<ButtonProps> = ({
     },
   };
 
-  // Rounded styles
   const roundedStyles = {
     sm: '4px',
     md: '6px',
@@ -86,24 +85,18 @@ const Button: React.FC<ButtonProps> = ({
     full: '9999px',
   };
 
-  const [calculatedWidth, setCalculatedWidth] = useState<number | string | undefined>(undefined);
-
-  useEffect(() => {
-    if (responsive) {
-      const uppdateWidth = () => {
-        const maxWidth = typeof width == 'number' ? width : 400;
-        const screenWidth = window.innerWidth;
-        const calc = Math.min(maxWidth, screenWidth - responsivePadding);
-        setCalculatedWidth(calc);
-      };
-
-      uppdateWidth();
-      window.addEventListener('resize', uppdateWidth);
-      return () => window.removeEventListener('resize', uppdateWidth);
-    } else {
-      setCalculatedWidth(width)
-    }
-  }, [responsive, responsivePadding, width]);
+  // Compute width before render (prevents flash)
+  let finalWidth: string | number | undefined;
+  if (fullWidth) {
+    finalWidth = '100%';
+  } else if (responsive) {
+    finalWidth =
+      typeof width === 'number'
+        ? `min(${width}px, calc(100vw - ${responsivePadding}px))`
+        : `min(${width || 400}px, calc(100vw - ${responsivePadding}px))`;
+  } else {
+    finalWidth = width;
+  }
 
   const baseStyles: React.CSSProperties = {
     display: 'inline-flex',
@@ -115,11 +108,10 @@ const Button: React.FC<ButtonProps> = ({
     textDecoration: 'none',
     transition: 'all 0.2s ease-in-out',
     opacity: disabled ? 0.6 : 1,
-    width: fullWidth ? '100%' : calculatedWidth,
+    width: finalWidth,
     height,
-    borderRadius: typeof rounded === 'boolean' 
-      ? (rounded ? '6px' : '0px') 
-      : roundedStyles[rounded],
+    borderRadius:
+      typeof rounded === 'boolean' ? (rounded ? '6px' : '0px') : roundedStyles[rounded],
     ...variantStyles[variant],
     ...sizeStyles[size],
     ...(padding && { padding }),
@@ -133,7 +125,7 @@ const Button: React.FC<ButtonProps> = ({
     transform: 'translateY(-1px)',
   };
 
-  const ButtonElement = (
+  const buttonElement = (
     <button
       type={type}
       onClick={disabled ? undefined : onClick}
@@ -141,9 +133,7 @@ const Button: React.FC<ButtonProps> = ({
       className={className}
       style={baseStyles}
       onMouseEnter={(e) => {
-        if (!disabled) {
-          Object.assign(e.currentTarget.style, hoverStyles);
-        }
+        if (!disabled) Object.assign(e.currentTarget.style, hoverStyles);
       }}
       onMouseLeave={(e) => {
         if (!disabled) {
@@ -156,16 +146,15 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 
-  // If href is provided, wrap with Link
   if (href && !disabled) {
     return (
       <Link href={href} target={target} style={{ textDecoration: 'none' }}>
-        {ButtonElement}
+        {buttonElement}
       </Link>
     );
   }
 
-  return ButtonElement;
+  return buttonElement;
 };
 
 export default Button;

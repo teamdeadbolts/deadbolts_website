@@ -105,8 +105,7 @@ const HeroSection = () => {
         </div>
         <div className={`${styles.hero_btn} ${styles.bold}`}>
           <Button
-            href="https://account.venmo.com/u/teamdeadbolts"
-            target="_blank"
+            href="/donate"
             size="lg"
             color="#fff"
             backgroundColor="#051017"
