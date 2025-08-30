@@ -33,16 +33,19 @@ export default function DonatePage() {
     </div>
     <p>Donations can be made via:</p>
     <div className={styles.links}>
-      <Button href="" variant="outline" size="lg" color="#000" width={250}>GoFundMe</Button>
-      <Button href="https://account.venmo.com/u/teamdeadbolts" variant="outline" size="lg" color="#000" width={250}>Venmo</Button>
+      <Button href="" variant="outline" size="lg" color="#000" width={250} height={60} fontSize={25} target="_blank">GoFundMe</Button>
+      <Button href="https://account.venmo.com/u/teamdeadbolts" variant="outline" size="lg" color="#000" width={250} height={60} fontSize={25} target="_blank">Venmo</Button>
     </div>
 
     <p><strong>For check donations</strong>: please make payable to "The Deadbolts FRC Team" and mail to: 1498 Orchard Ave, Boulder, CO 80304.</p>
-    <p>If you made a donation via Venmo or GoFundMe and would like a tax deductable reciept,
-      please send us an email at teamdeadbolts@gmail.com</p>
     <p>
       All contributions are tax-deductible as we are a 501(c)(3) organization.
       We can include your name and logo on our website, t-shirts, and the robot as a thank-you for your support.
+    </p>
+
+     <p>
+      If you made a donation via Venmo and would like a tax deductable reciept,
+      please send us an email at teamdeadbolts@gmail.com with your Venmo account name.
     </p>
 
     <p>
