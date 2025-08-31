@@ -46,18 +46,17 @@ export default function Sponsors() {
                         <li>Workshops, outreach events, and STEM education efforts</li>
                     </ul>
                     <p>
-                        We believe this program should be accessible to every student, nregardless of their financial background.
-                        That’s why we’re reaching out to local businesses and community members for support. In return, our
-                        sponsors receive logo placement on our robot, shirts, website, and more. Most importantly, any donation
-                        is an opportunity to support the next generation of engineers, creators, and changemakers.
-                        As a 501(c)(3) nonprofit, all donations to our team are tax-deductible to the extent permitted by law.
+                        We believe every student deserves access to STEM, regardless of their background. That’s why we’re inviting
+                        local businesses and community leaders to help us bring this vision to life. Every donation helps fund materials,
+                        competitions, and mentorship. All contributions are tax-deductible through our 501(c)(3). Want to make an impact?
+                        Head to our Donate page to learn more about how you can fuel our mission.
                     </p>
                     <br/>
                     <div className={styles.buttons}>
-                      <Button width={300} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="https://forms.gle/uuZscsTApGWR8Bm5A">
+                      <Button width={300} responsive={true} responsivePadding={30} size='xl' variant='outline' color='#000' href="https://forms.gle/uuZscsTApGWR8Bm5A">
                         Become a Sponsor
                       </Button>
-                      <Button width={300} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="/donate">
+                      <Button width={300} responsive={true} responsivePadding={30} size='xl' variant='outline' color='#000' href="/donate">
                         Donate Now
                       </Button>
                     </div>
