@@ -64,7 +64,7 @@ export default function DonatePage() {
       </Button>
     </div>
 
-    <p><strong>For check donations</strong>: please make payable to "The Deadbolts FRC Team" and send us an email for the mailing address</p>
+    <p><strong>For check donations</strong>: please make payable to "The Deadbolts FRC Team" and send us an email for the mailing address.</p>
     <p>
       All contributions are tax-deductible as we are a 501(c)(3) organization.
       <strong>We can include your name and logo on our website, t-shirts, and the robot as a thank-you for your support.</strong>
