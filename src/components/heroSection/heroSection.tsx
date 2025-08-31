@@ -29,7 +29,7 @@ const HeroSection = () => {
       const vh = window.innerHeight;
       // Map height → padding (shorter height = more padding)
       // Example: at 900px tall → 0px padding, at 500px tall → 200px padding
-      const padding = Math.max(0, 900 - vh) * (200 / 400); 
+      const padding = Math.max(0, 900 - vh) * (1 / 4); 
       document.documentElement.style.setProperty("--content-padding", `${padding}px`);
       ticking = false;
     };
@@ -105,8 +105,7 @@ const HeroSection = () => {
         </div>
         <div className={`${styles.hero_btn} ${styles.bold}`}>
           <Button
-            href="https://account.venmo.com/u/teamdeadbolts"
-            target="_blank"
+            href="/donate"
             size="lg"
             color="#fff"
             backgroundColor="#051017"

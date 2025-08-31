@@ -42,7 +42,7 @@ export default function Sponsors() {
                       <Button width={300} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="https://forms.gle/uuZscsTApGWR8Bm5A">
                         Become a Sponsor
                       </Button>
-                      <Button width={300} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="https://account.venmo.com/u/teamdeadbolts" target="_blank">
+                      <Button width={300} responsive={true} responsivePadding={30} size='lg' variant='outline' color='#000' href="/donate">
                         Donate Now
                       </Button>
                     </div>

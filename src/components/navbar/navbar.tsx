@@ -93,7 +93,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://account.venmo.com/u/teamdeadbolts" target="_blank" className={styles.dropdown_link} onClick={closeMobileMenu}>
+                  <Link href="/donate" className={styles.dropdown_link} onClick={closeMobileMenu}>
                     Donate
                   </Link>
                 </li>
