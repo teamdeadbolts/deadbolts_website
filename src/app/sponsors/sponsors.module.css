@@ -1,8 +1,9 @@
+/* === Header Section === */
 .support_header {
   position: relative;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
+  align-items: flex-start;
   flex-direction: row;
   padding: 30px;
   max-width: 100%;
@@ -13,40 +14,28 @@
   width: 100%;
   height: 120%;
   object-fit: cover;
-  overflow: hidden;
   transform: translateY(-100px);
 }
 
 .sponsor_img {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-
-  /* width: 200%; */
   z-index: -1;
-  -webkit-mask-image: linear-gradient(
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 25, 0.3)
-  );
-  mask-image: linear-gradient(
-    rgba(255, 255, 25, 0.3),
-    rgba(255, 255, 255, 0.3)
-  );
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 25, 0.3));
+  mask-image: linear-gradient(rgba(255, 255, 25, 0.3), rgba(255, 255, 255, 0.3));
 }
 
 .support_text {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: column;
+  align-items: center;
   max-width: 70vw;
-  padding: 0px 30px;
+  padding: 0 30px;
 }
 
 .support_image {
-  display: flex;
   height: 400px;
   object-fit: cover;
   overflow: hidden;
@@ -54,18 +43,16 @@
 
 .support_header h1 {
   font-size: 55px;
-  margin-bottom: 24px;
-  margin-top: 10px;
+  margin: 10px 0 24px;
 }
+
 .support_header h3 {
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .support_header p {
   font-size: 16px;
   text-align: justify;
-  text-justify: inter-word;
   margin-bottom: 10px;
   line-height: 1.5;
   word-spacing: -0.05em;
@@ -73,7 +60,7 @@
 
 .support_text ul {
   list-style-type: disc;
-  margin: 0 0 30px 40px;  /* top right bottom left */
+  margin: 0 0 30px 40px;
   text-align: left;
   width: 100%;
 }
@@ -83,28 +70,27 @@
   font-size: 16px;
 }
 
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
 .support_header .btn {
   width: 400px;
   height: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap; /* prevent wrapping */
+  white-space: nowrap;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-
-@media screen and (max-width: 960px) {
-    .support_header {
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+/* === Responsive === */
+@media (max-width: 960px) {
+  .support_header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
 
   .support_header img {
@@ -112,32 +98,71 @@
   }
 
   .support_text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     max-width: 90vw;
-    padding: 0px 30px;
     text-align: center;
   }
 
   .support_header h1 {
     font-size: 40px;
     margin-bottom: 20px;
-    text-align: center;
   }
 
   .support_header .btn {
     width: auto;
     max-width: 90%;
-    height: auto;
     padding: 0.75rem 1.5rem;
-    margin: 1rem auto 0 auto;
+    margin: 1rem auto 0;
+    height: auto;
   }
 
   .buttons {
     flex-direction: column;
-    align-items: center;
     gap: 10px;
   }
+}
+
+/* === Sponsors Grid === */
+.sponsors_list_container {
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.tier_section {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.tier_section h2 {
+  margin-bottom: 2rem;
+  font-size: 28px;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tier-specific grid sizing */
+.platinum  { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.gold      { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.silver    { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.bronze    { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+
+.sponsor_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor_card :global(img) {
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.2s ease;
+}
+
+.sponsor_card :global(img):hover {
+  transform: scale(1.02);
 }

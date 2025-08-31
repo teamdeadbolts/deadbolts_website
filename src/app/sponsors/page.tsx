@@ -1,11 +1,26 @@
 import React from 'react'
 import styles from './sponsors.module.css'
 import Button from '../../components/button/button'
+import sponsors from '../../data/sponsors.json';
 import { Metadata } from 'next'
+import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: "The Deadbolts | Sponsors"
 }
+
+type Sponsor = {
+  name: string,
+  image: string,
+  tier: 'platinum' | 'gold' | 'bronze' | 'silver'
+}
+
+const tiers: { tier: Sponsor['tier'], label: string, size: { w: number, h: number } }[] = [
+  { tier: 'platinum', label: 'Platinum Sponsors', size: { w: 400, h: 400 } },
+  { tier: 'gold', label: 'Gold Sponsors', size: { w: 300, h: 300 } },
+  { tier: 'silver', label: 'Silver Sponsors', size: { w: 200, h: 200 } },
+  { tier: 'bronze', label: 'Bronze Sponsors', size: { w: 150, h: 150 } },
+]
 
 export default function Sponsors() {
     return (
@@ -48,6 +63,31 @@ export default function Sponsors() {
                     </div>
                 </div>
             </div>
+            <div className={styles.sponsors_list_container}>
+            {tiers.map(({ tier, label, size }) => {
+              const tierSponsors = (sponsors as Sponsor[]).filter(s => s.tier === tier)
+              if (tierSponsors.length === 0) return null
+
+              return (
+                <div key={tier} className={styles.tier_section}>
+                  <h2>{label}</h2>
+                  <div className={`${styles.grid} ${styles[tier]}`}>
+                    {tierSponsors.map(sponsor => (
+                      <div key={sponsor.name} className={styles.sponsor_card}>
+                        <Image
+                          src={`/images/sponsors/${sponsor.image}`}
+                          alt={sponsor.name}
+                          width={size.w}
+                          height={size.h}
+                          style={{ objectFit: 'contain' }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
     )
 }
