@@ -29,7 +29,7 @@ export default function DonatePage() {
     </p>
 
     <p>
-      <strong>Exciting opportunity:</strong> A generous donor is offering a <strong>1:1 donation match up to $10,000</strong> until September 30th.       
+      ⭐️<strong>Exciting opportunity:</strong> A generous donor is offering a <strong>1:1 donation match up to $10,000</strong> until September 30th.⭐
     </p>
 
     <div className={styles.countdown}>
