@@ -7,7 +7,7 @@ const MATCH_END_DATA = new Date("2025-09-30T23:59:59");
 
 export const metadata: Metadata = {
   title: "The Deadbolts | Donate",
-  description: "Donate to Team Deadbotls"
+  description: "Donate to Team Deadbolts"
 }
 
 export default function DonatePage() {
@@ -27,6 +27,7 @@ export default function DonatePage() {
       Our first milestone is to raise <strong>$10,000 by October 1st</strong> so we can begin to build the robot.
       This is one of the most important parts of the season so it is critical we have a timely start.
     </p>
+
     <p>
       <strong>Exciting opportunity:</strong> A generous donor is offering a <strong>1:1 donation match up to $10,000</strong> until September 30th.       
     </p>
@@ -67,7 +68,7 @@ export default function DonatePage() {
     <p><strong>For check donations</strong>: please make payable to "The Deadbolts FRC Team" and send us an email for the mailing address.</p>
     <p>
       All contributions are tax-deductible as we are a 501(c)(3) organization.
-      <strong>We can include your name and logo on our website, t-shirts, and the robot as a thank-you for your support.</strong>
+      <strong> We can include your name and logo on our website, t-shirts, and the robot as a thank-you for your support.</strong>
     </p>
 
      <p>
