@@ -15,7 +15,7 @@ export default function DonatePage() {
   return <div className={styles.container}>
     <h1>Donate now</h1>
     <p>
-      <strong>To build our robot and be competative this season, we have a fundraising goal of $30,000</strong>. 
+      <strong>To build our robot and be competitive this season, we have a fundraising goal of $30,000</strong>. 
     </p>
     <ul>
       <li>$10,000 for the robot</li>
@@ -64,14 +64,14 @@ export default function DonatePage() {
       </Button>
     </div>
 
-    <p><strong>For check donations</strong>: please make payable to "The Deadbolts FRC Team" and mail to: 1498 Orchard Ave, Boulder, CO 80304.</p>
+    <p><strong>For check donations</strong>: please make payable to "The Deadbolts FRC Team" and send us an email for the mailing address</p>
     <p>
       All contributions are tax-deductible as we are a 501(c)(3) organization.
       <strong>We can include your name and logo on our website, t-shirts, and the robot as a thank-you for your support.</strong>
     </p>
 
      <p>
-      If you made a donation via Venmo and would like a tax deductable reciept,
+      If you made a donation via Venmo and would like a tax deductible receipt,
       please send us an email at teamdeadbolts@gmail.com with your Venmo account name.
     </p>
 

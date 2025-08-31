@@ -29,7 +29,7 @@ const HeroSection = () => {
       const vh = window.innerHeight;
       // Map height → padding (shorter height = more padding)
       // Example: at 900px tall → 0px padding, at 500px tall → 200px padding
-      const padding = Math.max(0, 900 - vh) * (1 / 3); 
+      const padding = Math.max(0, 900 - vh) * (1 / 4); 
       document.documentElement.style.setProperty("--content-padding", `${padding}px`);
       ticking = false;
     };
