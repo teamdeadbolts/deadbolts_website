@@ -40,7 +40,7 @@ export default function DonatePage() {
     <h3>Donations can be made via:</h3>
     <div className={styles.links}>
       <Button 
-        href="" 
+        href="https://gofund.me/984fbf3b" 
         variant="outline" 
         size="lg" 
         color="#000" 
