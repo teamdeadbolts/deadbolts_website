@@ -7,6 +7,7 @@
   padding: 30px;
   max-width: 100%;
   overflow-x: hidden;
+  margin-bottom: 10px;
 }
 
 .support_text {
@@ -90,14 +91,57 @@
   white-space: nowrap;
 }
 
+.dropdown {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dropdown[open] .tiers_container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown_summary {
+  width: fit-content;
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+.dropdown_summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown_summary::marker {
+  content: "";
+}
+
+.dropdown_summary:hover {
+  color: #828282;
+}
+
 .tiers_container {
-  margin: 30px;
   display: flex;
   gap: 25px;
   flex-direction: row;
   align-items: center;
   align-content: center;
+  justify-content: center;
   max-width: 90vw;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .tier_card {
@@ -105,13 +149,15 @@
   background-color: #f5f5f5;
   width: 35vw;
   max-width: 450px;
+  overflow: scroll;
   aspect-ratio: 450 / 550;
   max-height: 550px;
   min-height: 395px;
 }
 
 .tier_card li {
-  font-size: calc(min(23px, max(1.2vw, 15px)));
+  text-align: left;
+  font-size: 23px;
 }
 
 .tier_card h1 {
@@ -138,8 +184,51 @@
   list-style-type: circle;
 }
 
+.sponsors_list_container {
+  margin: 1rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
 
-/* === Responsive === */
+.tier_section {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.tier_section h2 {
+  margin-bottom: 2rem;
+  font-size: 28px;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.platinum  { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.gold      { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.silver    { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.bronze    { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+
+.sponsor_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor_card :global(img) {
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.2s ease;
+}
+
+.sponsor_card :global(img):hover {
+  transform: scale(1.00);
+}
+
+
 @media (max-width: 960px) {
   .support_text_container
  {
@@ -206,48 +295,8 @@
   }
 }
 
-/* === Sponsors Grid === */
-.sponsors_list_container {
-  margin: 4rem auto;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
-
-.tier_section {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.tier_section h2 {
-  margin-bottom: 2rem;
-  font-size: 28px;
-}
-
-.grid {
-  display: grid;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Tier-specific grid sizing */
-.platinum  { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.gold      { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-.silver    { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-.bronze    { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
-
-.sponsor_card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sponsor_card :global(img) {
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-  transition: transform 0.2s ease;
-}
-
-.sponsor_card :global(img):hover {
-  transform: scale(1.00);
+@media (max-width: 1200px) {
+  .tier_card li {
+    font-size: 18px;
+  }
 }
