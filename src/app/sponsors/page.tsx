@@ -4,6 +4,7 @@ import Button from '../../components/button/button'
 import sponsors from '../../data/sponsors.json';
 import { Metadata } from 'next'
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: "The Deadbolts | Sponsors"
@@ -12,20 +13,20 @@ export const metadata: Metadata = {
 type Sponsor = {
   name: string,
   image: string,
-  tier: 'platinum' | 'gold' | 'bronze' | 'silver'
+  tier: 'gold' | 'bronze' | 'silver',
+  href: string | undefined
 }
 
 const tiers: { tier: Sponsor['tier'], label: string, size: { w: number, h: number } }[] = [
-  { tier: 'platinum', label: 'Platinum Sponsors', size: { w: 400, h: 400 } },
-  { tier: 'gold', label: 'Gold Sponsors', size: { w: 300, h: 300 } },
-  { tier: 'silver', label: 'Silver Sponsors', size: { w: 200, h: 200 } },
-  { tier: 'bronze', label: 'Bronze Sponsors', size: { w: 150, h: 150 } },
+  { tier: 'gold', label: 'Gold Sponsors', size: { w: 400, h: 400 } },
+  { tier: 'silver', label: 'Silver Sponsors', size: { w: 300, h: 300 } },
+  { tier: 'bronze', label: 'Bronze Sponsors', size: { w: 200, h: 200 } },
 ]
 
 export default function Sponsors() {
     return (
         <div>
-            <div className={styles.support_header}>
+            <div className={styles.support_text_container}>
                 <div className={styles.support_text}>
                     <h1>Support Our Team</h1>
                     <h3>Help Us Build the Future, One Robot at a Time</h3>
@@ -61,6 +62,60 @@ export default function Sponsors() {
                       </Button>
                     </div>
                 </div>
+                <div className={styles.support_text}>
+                  <h2>Sponsorship Tiers</h2>
+                  <ul className={styles.tiers}>
+                    <li>
+                      <h1>Gold</h1>
+                      <h2>$1,500+</h2>
+                      <ul className={styles.benefits}>
+                        <li><strong>Large</strong> logo and name on:</li>
+                        <ul className={styles.benefits}>
+                          <li>Website sponsors page</li>
+                          <li>Team t-shirts</li>
+                          <li>Robot with prominent placement</li>
+                          <li>All printed event materials</li>
+                        </ul>
+                        <li>Shout-out in team newsletter</li>
+                        <li>Mention in all team media (Instagram, TikTok, YouTube)</li>
+                        <li>Letter of appreciation</li>
+                        <li>Framed set of photos of the team's robot in action</li>
+                      </ul>
+                    </li>
+                    <li> 
+                      <h1>Silver</h1>
+                      <h2>$750 - $1,499</h2>
+                      <ul className={styles.benefits}>
+                        <li><strong>Medium</strong> logo and name on:</li>
+                        <ul className={styles.benefits}>
+                          <li>Website sponsors page</li>
+                          <li>Team t-shirts</li>
+                          <li>Robot</li>
+                        </ul>
+                        <li>Instagram thank-you post</li>
+                        <li>Mention in team newsletter</li>
+                        <li>Letter of appreciation</li>
+                        <li>Invitation to all team events</li>
+                        <li>Framed photos of team’s robot in action</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h1>Bronze</h1>
+                      <h2>$200 - $749</h2>
+                      <ul className={styles.benefits}>
+                        <li><strong>Small</strong> logo on:</li>
+                        <ul className={styles.benefits}>
+                          <li>Website sponsors page</li>
+                          <li>Team t-shirts</li>
+                          <li>Robot</li>
+                        </ul>
+                        <li>Thank-you story mention on Instagram</li>
+                        <li>Letter of appreciation</li>   
+                        <li>Invitation to all team events</li>    
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
             </div>
             <div className={styles.sponsors_list_container}>
             {tiers.map(({ tier, label, size }) => {
@@ -71,8 +126,8 @@ export default function Sponsors() {
                 <div key={tier} className={styles.tier_section}>
                   <h2>{label}</h2>
                   <div className={`${styles.grid} ${styles[tier]}`}>
-                    {tierSponsors.map(sponsor => (
-                      <div key={sponsor.name} className={styles.sponsor_card}>
+                    {tierSponsors.map(sponsor => {
+                      const sponsorImage = (
                         <Image
                           src={`/images/sponsors/${sponsor.image}`}
                           alt={sponsor.name}
@@ -80,8 +135,21 @@ export default function Sponsors() {
                           height={size.h}
                           style={{ objectFit: 'contain' }}
                         />
-                      </div>
-                    ))}
+                      );
+                      if (sponsor.href == undefined) { 
+                        return (
+                          <div key={sponsor.name} className={styles.sponsor_card}>
+                            {sponsorImage}
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <Link href={sponsor.href} key={sponsor.name} className={styles.sponsor_card} target='_blank'>
+                            {sponsorImage}
+                          </Link>
+                        );
+                      }
+                    })}
                   </div>
                 </div>
               )

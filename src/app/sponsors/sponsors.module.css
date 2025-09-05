@@ -1,16 +1,24 @@
-/* === Header Section === */
-.support_header {
+.support_text_container {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   padding: 30px;
   max-width: 100%;
   overflow-x: hidden;
 }
 
-.support_header img {
+.support_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 70vw;
+  margin-top: 40px;
+  padding: 0 30px;
+}
+
+.support_text_container img {
   width: 100%;
   height: 120%;
   object-fit: cover;
@@ -27,30 +35,27 @@
   mask-image: linear-gradient(rgba(255, 255, 25, 0.3), rgba(255, 255, 255, 0.3));
 }
 
-.support_text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 70vw;
-  padding: 0 30px;
-}
-
 .support_image {
   height: 400px;
   object-fit: cover;
   overflow: hidden;
 }
 
-.support_header h1 {
+.support_text h1 {
   font-size: 55px;
   margin: 10px 0 24px;
 }
 
-.support_header h3 {
+.support_text h2 {
+  font-size: 35px;
+  margin: 10px 0 24px;
+}
+
+.support_text h3 {
   margin: 0 0 10px;
 }
 
-.support_header p {
+.support_text p {
   font-size: 16px;
   text-align: justify;
   margin-bottom: 10px;
@@ -76,7 +81,7 @@
   margin-top: 20px;
 }
 
-.support_header .btn {
+.support_text_container .btn {
   width: 400px;
   height: 50px;
   display: inline-flex;
@@ -85,15 +90,46 @@
   white-space: nowrap;
 }
 
+.tiers,
+.tiers > li {
+  list-style: none;
+}
+
+.tiers li {
+  font-size: 18px;
+}
+
+.tiers > li > .benefits {
+  list-style-type: disc;
+}
+
+.tiers > li > .benefits > .benefits {
+  list-style-type: circle;
+}
+
+.tiers h1 {
+  font-size: 30px;
+  margin: 5px 0 0;
+  font-weight: bold;
+}
+
+.tiers h2 {
+  font-size: 25px;
+  margin: 0;
+  font-weight: bold;
+}
+
 /* === Responsive === */
 @media (max-width: 960px) {
-  .support_header {
+  .support_text_container
+ {
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
 
-  .support_header img {
+  .support_text_container
+ img {
     height: 900px;
   }
 
@@ -102,12 +138,14 @@
     text-align: center;
   }
 
-  .support_header h1 {
+  .support_text_container
+ h1 {
     font-size: 40px;
     margin-bottom: 20px;
   }
 
-  .support_header .btn {
+  .support_text_container
+ .btn {
     width: auto;
     max-width: 90%;
     padding: 0.75rem 1.5rem;
