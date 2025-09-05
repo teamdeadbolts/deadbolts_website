@@ -62,14 +62,12 @@ export default function Sponsors() {
                       </Button>
                     </div>
                 </div>
-                <div className={styles.support_text}>
-                  <h2>Sponsorship Tiers</h2>
-                  <ul className={styles.tiers}>
-                    <li>
-                      <h1>Gold</h1>
-                      <h2>$1,500+</h2>
-                      <ul className={styles.benefits}>
-                        <li><strong>Large</strong> logo and name on:</li>
+                <div className={styles.tiers_container}>
+                  <div className={styles.tier_card}>
+                    <h1>Gold</h1>
+                    <h2>$1,500+</h2>
+                    <ul className={styles.benefits}>
+                      <li><strong>Large</strong> logo and name on:</li>
                         <ul className={styles.benefits}>
                           <li>Website sponsors page</li>
                           <li>Team t-shirts</li>
@@ -80,13 +78,13 @@ export default function Sponsors() {
                         <li>Mention in all team media (Instagram, TikTok, YouTube)</li>
                         <li>Letter of appreciation</li>
                         <li>Framed set of photos of the team's robot in action</li>
-                      </ul>
-                    </li>
-                    <li> 
-                      <h1>Silver</h1>
-                      <h2>$750 - $1,499</h2>
-                      <ul className={styles.benefits}>
-                        <li><strong>Medium</strong> logo and name on:</li>
+                    </ul>
+                  </div>
+                  <div className={styles.tier_card}>
+                    <h1>Silver</h1>
+                    <h2>$750 - $1,499</h2>
+                    <ul className={styles.benefits}>
+                      <li><strong>Medium</strong> logo and name on:</li>
                         <ul className={styles.benefits}>
                           <li>Website sponsors page</li>
                           <li>Team t-shirts</li>
@@ -97,13 +95,13 @@ export default function Sponsors() {
                         <li>Letter of appreciation</li>
                         <li>Invitation to all team events</li>
                         <li>Framed photos of team’s robot in action</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h1>Bronze</h1>
-                      <h2>$200 - $749</h2>
-                      <ul className={styles.benefits}>
-                        <li><strong>Small</strong> logo on:</li>
+                    </ul>
+                  </div>
+                  <div className={styles.tier_card}>
+                    <h1>Brozne</h1>
+                    <h2>$200 - $749</h2>
+                    <ul className={styles.benefits}>
+                      <li><strong>Small</strong> logo on:</li>
                         <ul className={styles.benefits}>
                           <li>Website sponsors page</li>
                           <li>Team t-shirts</li>
@@ -111,10 +109,9 @@ export default function Sponsors() {
                         </ul>
                         <li>Thank-you story mention on Instagram</li>
                         <li>Letter of appreciation</li>   
-                        <li>Invitation to all team events</li>    
-                      </ul>
-                    </li>
-                  </ul>
+                        <li>Invitation to all team events</li>   
+                    </ul>
+                  </div>
                 </div>
             </div>
             <div className={styles.sponsors_list_container}>
