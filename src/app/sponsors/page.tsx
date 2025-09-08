@@ -54,7 +54,7 @@ export default function Sponsors() {
           </p>
           <br/>
           <div className={styles.buttons}>
-            <Button width={400} responsive={true} responsivePadding={30} size='xl' variant='outline' color='#000' href="https://forms.gle/uuZscsTApGWR8Bm5A">
+            <Button width={400} responsive={true} responsivePadding={30} size='xl' variant='outline' color='#000' href="/donate">
               Become a Sponsor
             </Button>
           </div>
