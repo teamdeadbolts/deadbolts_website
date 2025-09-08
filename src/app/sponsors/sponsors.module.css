@@ -113,6 +113,7 @@
 }
 
 .dropdown_summary {
+  list-style: none;
   width: fit-content;
   position: relative;
   cursor: pointer;
@@ -205,7 +206,7 @@
 
 .tier_section h2 {
   margin-bottom: 2rem;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .grid {

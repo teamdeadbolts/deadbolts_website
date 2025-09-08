@@ -18,9 +18,9 @@ type Sponsor = {
 }
 
 const tiers: { tier: Sponsor['tier'], label: string, size: { w: number, h: number } }[] = [
-  { tier: 'gold', label: 'Gold Sponsors', size: { w: 400, h: 400 } },
+  { tier: 'gold', label: 'Gold Sponsors', size: { w: 500, h: 500 } },
   { tier: 'silver', label: 'Silver Sponsors', size: { w: 300, h: 300 } },
-  { tier: 'bronze', label: 'Bronze Sponsors', size: { w: 200, h: 200 } },
+  { tier: 'bronze', label: 'Bronze Sponsors', size: { w: 120, h: 120 } },
 ]
 
 export default function Sponsors() {
