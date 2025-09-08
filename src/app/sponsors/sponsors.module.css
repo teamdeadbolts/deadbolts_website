@@ -216,7 +216,6 @@
   align-items: center;
 }
 
-.platinum  { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .gold      { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .silver    { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 .bronze    { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
@@ -301,6 +300,19 @@
     font-size: 18px;
     color: #000000d2;
     text-align: center;
+  }
+
+  .gold img { 
+    width: 450px;
+    height: 450px;
+  }
+  .silver img { 
+    width: 250px;
+    height: 250px;
+  }
+  .bronze img { 
+    width: 100px;
+    height: 100px;
   }
 }
 
