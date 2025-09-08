@@ -107,23 +107,13 @@
 
 .dropdown_summary {
   width: fit-content;
-  display: inline-block;
-  list-style: none;
+  /* display: inline-block; */
   cursor: pointer;
   font-size: 34px;
   font-weight: bold;
   text-align: center;
   padding: 20px;
   margin-bottom: 20px;
-}
-
-
-.dropdown_summary::-webkit-details-marker {
-  display: none;
-}
-
-.dropdown_summary::marker {
-  content: "";
 }
 
 .dropdown_summary:hover {
@@ -147,12 +137,9 @@
 .tier_card {
   padding: 20px;
   background-color: #f5f5f5;
-  width: 35vw;
-  max-width: 450px;
-  overflow: scroll;
+  width: clamp(250px, 35vw, 450px);
   aspect-ratio: 450 / 550;
-  max-height: 550px;
-  min-height: 395px;
+  overflow-y: auto;
 }
 
 .tier_card li {
