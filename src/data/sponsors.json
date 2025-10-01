@@ -3,5 +3,11 @@
     "name": "Springer Family Foundation",
     "image": "springer.jpg",
     "tier": "gold"
+  },
+  {
+    "name": "Yamahiro Orthodontics",
+    "image": "yamashiro.webp",
+    "tier": "bronze",
+    "href": "https://www.orthodontistinboulder.com/"
   }
 ]
