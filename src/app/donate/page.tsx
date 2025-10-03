@@ -24,12 +24,12 @@ export default function DonatePage() {
     </ul>
 
     <p>
-      Our first milestone is to raise <strong>$10,000 by October 1st</strong> so we can begin to build the robot.
+      We have currently raised $10000. Our current milestone is to raise another <strong>$10,000 by November 1st</strong> so we can begin to build the robot.
       This is one of the most important parts of the season so it is critical we have a timely start.
     </p>
 
     <p>
-      ⭐️<strong>Exciting opportunity:</strong> A generous donor is offering a <strong>1:1 donation match up to $10,000</strong> until September 30th.⭐
+      ⭐️<strong>Exciting opportunity:</strong> A generous donor is offering a <strong>1:1 donation match up to $10,000</strong> until October 31st.⭐
     </p>
 
     <div className={styles.countdown}>
