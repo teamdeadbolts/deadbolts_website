@@ -302,7 +302,7 @@
     text-align: center;
   }
 
-  .gold img { 
+  /* .gold img { 
     width: 450px;
     height: 450px;
   }
@@ -313,7 +313,7 @@
   .bronze img { 
     width: 100px;
     height: 100px;
-  }
+  } */
 }
 
 @media (max-width: 1200px) {

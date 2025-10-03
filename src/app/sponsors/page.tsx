@@ -17,10 +17,10 @@ type Sponsor = {
   href: string | undefined
 }
 
-const tiers: { tier: Sponsor['tier'], label: string, size: { w: number, h: number } }[] = [
-  { tier: 'gold', label: 'Gold Sponsors', size: { w: 500, h: 500 } },
-  { tier: 'silver', label: 'Silver Sponsors', size: { w: 300, h: 300 } },
-  { tier: 'bronze', label: 'Bronze Sponsors', size: { w: 120, h: 120 } },
+const tiers: { tier: Sponsor['tier'], label: string, size: { desktop: number, mobile: number } }[] = [
+  { tier: 'gold', label: 'Gold Sponsors', size: { desktop: 500, mobile: 400 } },
+  { tier: 'silver', label: 'Silver Sponsors', size: { desktop: 300, mobile: 240 } },
+  { tier: 'bronze', label: 'Bronze Sponsors', size: { desktop: 120, mobile: 96 } },
 ]
 
 export default function Sponsors() {
@@ -131,9 +131,13 @@ export default function Sponsors() {
                     <Image
                       src={`/images/sponsors/${sponsor.image}`}
                       alt={sponsor.name}
-                      width={size.w}
-                      height={size.h}
-                      style={{ objectFit: 'contain' }}
+                      width={size.desktop}
+                      height={size.desktop}
+                      style={{ objectFit: 'contain', height: 'auto' }}
+                      sizes={`
+                        (max-width: 640px) ${size.mobile}px,
+                        ${size.desktop}px
+                      `}
                     />
                   );
                   if (sponsor.href == undefined) { 

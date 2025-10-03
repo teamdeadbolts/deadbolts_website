@@ -58,6 +58,6 @@ export const people: Person[] = [
     name: 'Sachin Sangvikar',
     roleTitle: 'Lead Mentor',
     role: 'Mentor',
-    description: '',
+    description: 'Sachin, a dedicated and highly skilled software engineer is proud to be our lead mentor. Offering guidance and support, he will allow our team to make more efficient decisions and problem solve faster.',
   },
 ];
