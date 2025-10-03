@@ -24,7 +24,7 @@ export default function DonatePage() {
     </ul>
 
     <p>
-      We have currently raised $10000. Our current milestone is to raise another <strong>$10,000 by November 1st</strong> so we can begin to build the robot.
+      We have raised $10000. Our current milestone is to raise another <strong>$10,000 by November 1st</strong> so we can begin to build the robot.
       This is one of the most important parts of the season so it is critical we have a timely start.
     </p>
 
