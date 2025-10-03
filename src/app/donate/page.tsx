@@ -3,7 +3,7 @@ import Countdown from "../../components/countdown/countdown";
 import styles from './donate.module.css'
 import Button from "../../components/button/button";
 
-const MATCH_END_DATA = new Date("2025-09-30T23:59:59");
+const MATCH_END_DATA = new Date("2025-10-31T23:59:59");
 
 export const metadata: Metadata = {
   title: "The Deadbolts | Donate",
