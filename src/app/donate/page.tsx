@@ -3,7 +3,7 @@ import Countdown from "../../components/countdown/countdown";
 import styles from './donate.module.css'
 import Button from "../../components/button/button";
 
-const MATCH_END_DATA = new Date("2025-09-30T23:59:59");
+const MATCH_END_DATA = new Date("2025-11-31T23:59:59");
 
 export const metadata: Metadata = {
   title: "The Deadbolts | Donate",
@@ -15,25 +15,25 @@ export default function DonatePage() {
   return <div className={styles.container}>
     <h1>Donate now</h1>
     <p>
-      <strong>To build our robot and be competitive this season, we have a fundraising goal of $30,000</strong>. 
+      <strong>To build our robot and be competitive this season, we have a fundraising goal of $37,000</strong>. 
     </p>
     <ul>
       <li>$10,000 for the robot</li>
-      <li>$12,000 for two competition registrations</li>
-      <li>$8,000 for materials and team operations</li>
+      <li>$18,000 for two competition registrations</li>
+      <li>$9,000 for materials and team operations</li>
     </ul>
 
     <p>
-      Our first milestone is to raise <strong>$10,000 by October 1st</strong> so we can begin to build the robot.
+      We have raised $30000. Our current milestone is to raise another <strong>$7,000 by November 31th</strong> so we can begin to build the robot.
       This is one of the most important parts of the season so it is critical we have a timely start.
     </p>
 
     <p>
-      ⭐️<strong>Exciting opportunity:</strong> A generous donor is offering a <strong>1:1 donation match up to $10,000</strong> until September 30th.⭐
+      ⭐️<strong>Exciting opportunity:</strong> A generous donor is offering a <strong>1:1 donation match up to $5,000</strong> until November 31st.⭐
     </p>
 
     <div className={styles.countdown}>
-      <h2>Time left for our $10,000 donation match</h2>
+      <h2>Time left for our $5,000 donation match</h2>
       <Countdown timeEnd={MATCH_END_DATA} width={800} />
     </div>
 
