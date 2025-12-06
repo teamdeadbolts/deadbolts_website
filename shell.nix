@@ -4,7 +4,7 @@ pkgs.stdenv.mkDerivation {
   name = "deadbolts";
 
   buildInputs = with pkgs; [
-    nodejs_22
+    nodejs_24
     google-lighthouse
   ];
 }
